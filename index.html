@@ -1,4 +1,4 @@
-<!-- Last Updated Nov 06 2025 -->
+<!-- Last Updated Nov 12 2025 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,7 +25,7 @@
 <body class="background">
 <nav> <!-- Navigation Bar -->
     <ul>
-        <!-- Buttons converted to anchors so they inherit link styling -->
+        <li><div class="sidebarbtn" title="Only works on Home page.">Discography</div></li>
         <li><a href="#" onclick="showHomePage(); return false;">Home</a></li>
         <li><a href="#" onclick="showAboutPage(); return false;">About</a></li>
         <li><a href="#" onclick="showContactPage(); return false;">Contact</a></li>
@@ -35,8 +35,8 @@
 <button id="scrollToTopBtn" title="Go to top">Top</button>
 <!-- BGM -->
 <audio id="BGM" src="InTheDark.mp3" loop></audio>
-<div id="music-art">
-  <img class="album-cover" src="RomanEmpireCover.png" alt="Album Cover">
+<div id="bgm-art">
+  <img class="bgm-cover" src="RomanEmpireCover.png" alt="Album Cover">
   <img class="play-pause" src="pause.png" alt="Play/Pause">
 </div>
 <!-- Header -->
@@ -75,6 +75,17 @@ so look forward to improvements in quality & functionality!</p>
         <th>Update</th>
         <th>Details</th>
     </tr></thead>
+<tr>
+        <td>v25.12.02</td>
+        <td>More aesthetic changes.</td>
+        <td>
+            <ul>
+                <li>Redesigned album cover section into a card that allows space for more info.</li>
+                <li>Turned album navigation into a “Discography” tab. Opens into a fixed and collapsible sidebar. Also added status symbols to represent the up-to-dateness of the photocards.</li>
+                <li>Changed colors used on site to match Do It.</li>
+            </ul>
+        </td>
+    </tr>
         <tr>
         <td>v25.11.10</td>
         <td>More aesthetic changes.</td>
@@ -95,7 +106,6 @@ so look forward to improvements in quality & functionality!</p>
                 <li>Redesigned navigation bar.</li>
                 <li>Added BGM (Currently <a href="https://www.youtube.com/watch?v=Yv8g9GE9VAY" target="_blank">In The Dark</a> on loop).</li>
                 <li>Turned update log into a table with calendar versioning.</li>
-                <!-- <li>Added photocards.</li> -->
             </ul>
         </td>
     </tr>
@@ -130,7 +140,7 @@ so look forward to improvements in quality & functionality!</p>
 <p>Feel free to reach out to me if you have any questions, suggestions, or feedback about the website. I appreciate your input!</p>
     <hr>
     <!-- Turned the form button into an anchor so it shares link styling with the nav -->
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSd-AAPD98qPNYZLj_d-jL4sfqW6g9Ezy49xYmB7iDQheM2fFQ/viewform?usp=header" target="_blank"><button class="button-form">Feedback Form</button></a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSd-AAPD98qPNYZLj_d-jL4sfqW6g9Ezy49xYmB7iDQheM2fFQ/viewform?usp=header" target="_blank"><button class="form-btn">Feedback Form</button></a>
     <p> Use this form if:
     <ul>
         <li>You want to report missing or incorrect content.</li>
@@ -142,65 +152,105 @@ so look forward to improvements in quality & functionality!</p>
     <p>If the form doesn't meet your needs, I am also reachable by email.</p>
         Email: <b> manyodev@outlook.com</b>
 </div> <!-- Contact End -->
-<div class="bg-top home-page">
-<!-- Sidebar --> <!-- <div class="sidebar"> 
+<div class="home-page">
+<!-- Sidebar --> 
+<div class="sidebar">
+    <ul>
+        <li><small>Click <strong>Discography</strong> again to close this window.</small></li>
+        <li><span class="ribbondone">Complete</span></li>
+        <li><span class="ribbonwip">Nearly complete</span></li>
+        <li><span class="ribbonic">Incomplete</span></li>
+    </ul>
     <p>2018</p>
-    <a href="#mixtape">Mixtape</a>
-    <a href="#stay0th">Stay 0th</a>
-    <a href="#iamnot">I Am Not</a>
-    <a href="#iamnottw">I Am Not (Taiwan Edition)</a>
-    <a href="#iamnotuv">I Am Not (Unveil)</a>
-    <a href="#iamwho">I Am Who</a>
-    <a href="#iamwhouv">I Am Who (Unveil)</a>
-    <a href="#iamyou">I Am You</a>
-    <a href="#iamyoutw">I Am You (Taiwan Edition)</a>
-    <a href="#iamyouuv">I Am You (Unveil)</a>
-    <a href="#iamyoumg">I Am You (Meet & Greet)</a>
+    <a href="#mixtape">Mixtape<span class="ribbondone"></span></a>
+    <a href="#stay0th">Stay 0th<span class="ribbondone"></span></a>
+    <a href="#iamnot">I am NOT<span class="ribbondone"></span></a>
+    <a href="#iamnottw">I Am Not (Taiwan Edition)<span class="ribbonwip"></span></a>
+    <a href="#iamnotuv">I Am Not (Unveil)<span class="ribbonwip"></span></a>
+    <a href="#iamwho">I Am Who<span class="ribbondone"></span></a>
+    <a href="#iamwhouv">I Am Who (Unveil)<span class="ribbonic"></span></a>
+    <a href="#iamyou">I Am You<span class="ribbondone"></span></a>
+    <a href="#iamyoutw">I Am You (Taiwan Edition)<span class="ribbonwip"></span></a>
+    <a href="#iamyouuv">I Am You (Unveil)<span class="ribbonic"></span></a>
+    <a href="#iamyoumg">I Am You (Meet & Greet)<span class="ribbondone"></span></a>
     <p>2019</p>
-    <a href="#cle1">Clé 1 : MIROH</a>
-    <a href="#stay1st">Stay 1st</a>
-    <a href="#cle2">Clé 2 : Yellow Wood</a>
+    <a href="#cle1">Clé 1 : MIROH<span class="ribbonwip"></span></a>
+    <a href="#stay1st">Stay 1st<span class="ribbondone"></span></a>
+    <a href="#cle2">Clé 2 : Yellow Wood<span class="ribbonic"></span></a>
     <a href="#cle2tw">Clé 2 : Yellow Wood (Taiwan Edition)</a>
-    <a href="#cle3">Clé : Levanter</a>
+    <a href="#stayinlondon">Stay in London</a>
+    <a href="#cle3">Clé : Levanter<span class="ribbonic"></span></a>
     <p>2020</p>
-    <a href="#skz2020">SKZ2020</a>
-    <a href="#topjp">Top</a>
-    <a href="#golive">GO生 (Go Live)</a>
-    <a href="#inlife">IN生 (In Life)</a>
-    <a href="#allin">All In</a>
+    <a href="#skz2020">SKZ2020<span class="ribbonic"></span></a>
+    <a href="#topjp">Top<span class="ribbonic"></span></a>
+    <a href="#golive">GO生 (Go Live)<span class="ribbonic"></span></a>
+    <a href="#inlife">IN生 (In Life)<span class="ribbonic"></span></a>
+    <a href="#stayplayground">Stay in Playground<span class="ribbonic"></span></a>
+    <a href="#allin">All In<span class="ribbonic"></span></a>
     <p>2021</p>
-    <a href="#noeasy">NOEASY</a>
-    <a href="#scars">SCARS</a>
-    <a href="#evel">Christmas EveL</a>
-    <a href="#stay2nd">Stay 2nd</a>
+    <a href="#noeasy">NOEASY<span class="ribbonic"></span></a>
+    <a href="#scars">SCARS<span class="ribbonic"></span></a>
+    <a href="#evel">Christmas EveL<span class="ribbonic"></span></a>
+    <a href="#stay2nd">Stay 2nd<span class="ribbonic"></span></a>
     <p>2022</p>
-    <a href="#odd">Oddinary</a>
-    <a href="#circus">Circus</a>
+    <a href="#odd">Oddinary<span class="ribbonic"></span></a>
+    <a href="#circus">Circus<span class="ribbonic"></span></a>
     <a href="#max">Maxident</a>
-    <a href="#stay3rd">Stay 3rd</a>
-    <a href="#skzreplay">SKZ-Replay</a>
+    <a href="#stay3rd">Stay 3rd<span class="ribbonic"></span></a>
+    <a href="#skzreplay">SKZ-Replay<span class="ribbonic"></span></a>
+    <a href="#stayinstay">Stay in Stay<span class="ribbonic"></span></a>
     <p>2023</p>
-    <a href="#sound">The Sound</a>
-    <a href="#5star">5-Star</a>
-    <a href="#socialpath">Social Path</a>
-    <a href="#rockstar">樂-STAR (Rock-Star)</a>
+    <a href="#sound">The Sound<span class="ribbonic"></span></a>
+    <a href="#5star">5-Star<span class="ribbonic"></span></a>
+    <a href="#socialpath">Social Path<span class="ribbonic"></span></a>
+    <a href="#rockstar">樂-STAR (Rock-Star)<span class="ribbonic"></span></a>
     <p>2024</p>
-    <a href="#stay4th">Stay 4th</a>
-    <a href="#ate">ATE</a>
-    <a href="#giant">GIANT</a>
-    <a href="#hop">HOP</a>
+    <a href="#stay4th">Stay 4th<span class="ribbonic"></span></a>
+    <a href="#ate">ATE<span class="ribbonic"></span></a>
+    <a href="#giant">GIANT<span class="ribbonic"></span></a>
+    <a href="#hop">HOP<span class="ribbonic"></span></a>
     <p>2025</p>
-    <a href="#stay5th">Stay 5th</a>
-    <a href="#hollow">Hollow</a>
-    <a href="#karma">KARMA</a>
-</div> -->
+    <a href="#stay5th">Stay 5th<span class="ribbonic"></span></a>
+    <a href="#hollow">Hollow<span class="ribbonic"></span></a>
+    <a href="#karma">KARMA<span class="ribbonic"></span></a>
+    <a href="#doit">DO IT<span class="ribbonic"></span></a>
+    <ul>
+        <li><small>Click <strong>Discography</strong> again to close this window.</small></li>
+        <li><span class="ribbondone">Complete</span></li>
+        <li><span class="ribbonwip">Complete with placeholder images</span></li>
+        <li><span class="ribbonic">Incomplete</span></li>
+    </ul>
+</div> <!-- Sidebar End -->
 <!-- Main Content --> 
-    <!-- Logo & Signatures --> <div class="album"> 
-    <img src="pngwing.com.png" alt="Image failed :(" width="30%">
-    <p> Fun fact: Bang Chan created the Stray Kids logo. You'll notice the logo is in his handwriting.</p>
-    <h1>Signatures</h1>
-    <p> 2017 ~ Present </p>
+<div class="info">
+  <p><strong>Tip!</strong> Scroll the page to view all photocards in order of release, or click <strong>Discography</strong> in the top left to jump straight to a specific album.</p>
+</div>
+<!-- Logo & Signatures -->
+ <!-- Album Card -->
+<div class="album-card">  
+<!-- Left Side -->
+ <div class="album-card-l">
+<!-- Digital Album Cover -->
+  <img class="album-cover" src="skz-logo.svg" alt="Logo of South Korean boy band Stray Kids" title="Stray Kids Logo"> 
+<!-- Album Title -->
+   <p class="album-title">Official Logo</p>
+<!-- Tags: Release date, album type, etc. -->
+   <p class="album-tag">2017</p>
+  <p class="album-tag">Logo</p>
+</div>
+<!-- Right Side -->
+  <div class="album-card-r">
+<!-- Physical Album Cover -->
+  <div class="album-container">
+    <img class="album-physical" src="skz-logo-red.png" alt="Red Stray Kids Logo">
+    <img class="album-physical" src="https://i.pinimg.com/736x/15/65/8c/15658c1f7b3f464c07d23775b18f3b51.jpg" alt="Stray Kids Logo Do It">
+    <img class="album-physical" src="https://i.pinimg.com/736x/5e/e5/ae/5ee5ae90e66484003ad42d0fa1349598.jpg" alt="Stray Kids Logo Karma">
     </div>
+<!-- More Tags -->   
+  <p class="album-tag">The Logo was hand-drawn by Bang Chan, that's why it's in his handwriting.</p>
+  <p class="album-tag">The logo is often represented in different colors each era.</p>
+</div>
+</div>
 <!-- Logo & Signatures --> <div class="member">
 <div>Bang Chan
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6TJJ8BqKi_JPLVbZ0SPd_6hbtTAyGegNaW23Qw2VgYO5OKGvcBbpODkYRxk5x3Mjpmnw&usqp=CAU" alt="Image failed :(" width="100%">
@@ -227,10 +277,50 @@ so look forward to improvements in quality & functionality!</p>
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/I.N_Signature_02.png/330px-I.N_Signature_02.png" alt="Image failed :(" width="100%">
 </div>
 </div>
-<!-- Mixtape --> <div class="album">
-    <img src="https://upload.wikimedia.org/wikipedia/en/9/94/Stray_Kids_Mixtape.jpg" alt="Image failed :(" width="10%" id="mixtape">
-    <h1> Mixtape</h1>
-    <p> 2018 ~ Pre-debut Mixtape</p>
+<div class="poca">
+    Signatures
+</div>
+<!-- Mixtape -->
+<!-- Album Card + ID for Navigation Tab -->
+<div class="album-card" id="mixtape">
+  
+<!-- Left Side -->
+ <div class="album-card-l">
+   
+<!-- Digital Album Cover -->
+  <img class="album-cover" src="https://upload.wikimedia.org/wikipedia/en/9/94/Stray_Kids_Mixtape.jpg" alt="Mixtape Digital Cover" title="Mixtape (Digital Cover)">
+   
+<!-- Album Title -->
+   <p class="album-title">Mixtape</p>
+   
+<!-- Tags: Release date, album type, etc. -->
+   <p class="album-tag">January 8, 2018</p>
+
+   <p class="album-tag">Mini Album</p>
+   
+    <p class="album-tag">Predebut</p>
+    
+</div>
+<!-- Right Side -->
+  <div class="album-card-r">
+    
+<!-- Physical Album Cover -->
+  <div class="album-container">
+    
+    <img class="album-physical" src="https://m.media-amazon.com/images/I/51Qurnoo7VL._SL1500_.jpg" alt="Mixtape Physical Cover" title="Mixtape">
+      
+    <!-- Preview -->
+   <img class="album-physical" src="https://d1tsg92bbnlhd6.cloudfront.net/gAAAAABn5LV2sASWLWVu3CoYH0Xu56ljltvE-g9iFVJrspfo-fTsn19JB8JlWVj2nRu4xx3aQToIQzmGobllJNP1W2s-24xYkNcivanVEOz-T6u4JVwFKtiLjAzO7SHA-qumZ5dreMShpsMFrPfKP0ZC8TT2E7gl4A%3D%3D/1070cf0204577c44ea3de9c02af994cbef3e2942.jpg">
+    </div>
+   
+ <!-- More Tags -->   
+  <p class="album-tag">1 version</p>   <p class="album-tag"> 2 Photocard Types</p>
+ 
+  <p class="album-tag"> 16 Photocards</p>
+    
+  <p class="album-tag">55mm x 85mm Photocards</p>
+    
+</div>
 </div>
 <!-- Mixtape Selca--> <div class="member">
 <div> Bang Chan
@@ -291,11 +381,30 @@ so look forward to improvements in quality & functionality!</p>
 <div class="poca">
     Making
 </div>
-<!--Official Fanclub STAY: 0th --> <div class="album">
-    <img src="https://media.karousell.com/media/photos/products/2018/06/05/stray_kids_official_fan_club_0th_generation_1528196389_1d4f1fb9.jpg" alt="Image failed :(" width="10%" id="stay0th">
-    <h1> Stray Kids Official Fan Club: 0th Generation</h1>
-    <h1> Official Fanclub STAY: 0th Generation</h1>
-    <p> 2018 ~ Official Fanclub Opens, Active February 9, 2018 - March 25, 2019</p>
+<!--Official Fanclub STAY: 0th -->
+ <!-- Album Card -->
+<div class="album-card" id="stay0th">  
+<!-- Left Side -->
+	<div class="album-card-l">
+<!-- Digital Album Cover -->
+		<img class="album-cover" src="https://pm1.aminoapps.com/6901/cd8a5eeeaa0a7370fe7a6e391d6743faef7a1f4fr1-2048-1536v2_hq.jpg" alt=""> 
+<!-- Album Title -->
+		<p class="album-title">Stray Kids Official Fan Club: 0th Generation</p>
+<!-- Tags: Release date, album type, etc. -->
+		<p class="album-tag">February 9, 2018 - March 25, 2019</p>
+	  <p class="album-tag">Official Fanclub</p>
+	</div>
+<!-- Right Side -->
+	<div class="album-card-r">
+<!-- Physical Album Cover -->
+	  <div class="album-container">
+	    <img class="album-physical" src="https://pm1.aminoapps.com/6902/79b2d8ad00c06e2e691d2a44d4eba1cb2d86554cr1-1041-706v2_hq.jpg">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+    </div>
+<!-- More Tags -->   
+		<p class="album-tag">1 photocard set</p>
+	</div>
 </div>
 <!--Official Fanclub STAY: 0th --> <div class="member">
 <div>Bang Chan
@@ -324,10 +433,30 @@ so look forward to improvements in quality & functionality!</p>
 </div>
 </div>
 <div class="poca">0th Generation</div>
-<!-- I Am Not --> <div class="album">
-    <img src="https://upload.wikimedia.org/wikipedia/en/1/14/Stray_Kids_Debut_Album.jpg" alt="Image failed :(" width="10%" id="iamnot">
-    <h1> I Am Not</h1>
-    <p> 2018 ~ Debut Mini Album</p>
+<!-- I Am Not -->
+<!-- Album Card -->
+<div class="album-card" id="iamnot">  
+<!-- Left Side -->
+	<div class="album-card-l">
+<!-- Digital Album Cover -->
+		<img class="album-cover" src="https://upload.wikimedia.org/wikipedia/en/1/14/Stray_Kids_Debut_Album.jpg" alt=""> 
+<!-- Album Title -->
+		<p class="album-title">I am NOT</p>
+<!-- Tags: Release date, album type, etc. -->
+		<p class="album-tag">March 25, 2018</p>
+	  <p class="album-tag">Mini Album</p>
+      <p class="album-tag">Official Debut</p>
+	</div>
+<!-- Right Side -->
+	<div class="album-card-r">
+<!-- Physical Album Cover -->
+	  <div class="album-container">
+	    <img class="album-physical" src="https://www.hellohallyukpop.com/cdn/shop/files/i_am_ver.png?v=1713482223&width=900" alt="I Am NOT (I Am ver.)" title="I AM ver.">
+	    <img class="album-physical" src="https://www.hellohallyukpop.com/cdn/shop/files/not_ver.png?v=1713482223&width=900" alt="I Am NOT (NOT ver.)" title="NOT ver.">
+    </div>
+<!-- More Tags -->   
+		<p class="album-tag">2 Versions</p>
+	</div>
 </div>
 <!-- I Am Not --> <div class="member">
 <div>Bang Chan
@@ -383,10 +512,28 @@ so look forward to improvements in quality & functionality!</p>
 </div>
 </div>
 <div class="poca">Childhood Photo</div>
-<!-- I Am Not: Special Edition --> <div class="album">
-    <img src="https://st.cdjapan.co.jp/pictures/l/15/00/NEOIMP-15922.jpg" alt="Image failed :(" width="10%" id="iamnottw">
-    <h1> I Am Not: Special Edition</h1>
-    <p> 2018 ~ Exclusive Taiwan Release</p>
+<!-- I Am Not: Special Edition --> <div class="album-card" id="iamnottw">  
+<!-- Left Side -->
+	<div class="album-card-l">
+<!-- Digital Album Cover -->
+		<img class="album-cover" src="https://st.cdjapan.co.jp/pictures/l/15/00/NEOIMP-15922.jpg" alt=""> 
+<!-- Album Title -->
+		<p class="album-title">I Am Not: Taiwan Edition</p>
+<!-- Tags: Release date, album type, etc. -->
+		<p class="album-tag">September 14, 2018</p>
+	   <p class="album-tag">Mini Album</p>
+	</div>
+<!-- Right Side -->
+	<div class="album-card-r">
+<!-- Physical Album Cover -->
+	  <div class="album-container">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+    </div>
+<!-- More Tags -->   
+		<p class="album-tag">Exclusive Taiwan Release</p>
+	    </div>
 </div>
 <!-- I Am Not: Special Edition --> <div class="member">
 <div>Bang Chan
@@ -415,10 +562,33 @@ so look forward to improvements in quality & functionality!</p>
 </div>
 </div>
 <div class="poca">Taiwan Edition</div>
-<!-- Unveil [OP.01:I am NOT]--> <div class="album">
-    <img src="non-ph-images/UNVEIL_IamNOT.jpeg" alt="Image failed :(" width="20%" id="iamnotuv">
-    <h1> Unveil [OP.01:I am NOT]</h1>
-    <p> 2018 ~ Debut Showcase</p>
+<!-- Unveil [OP.01:I am NOT]-->
+<!-- Album Card -->
+<div class="album-card" id="iamnotuv">  
+<!-- Left Side -->
+	<div class="album-card-l">
+<!-- Digital Album Cover -->
+		<img class="album-cover" src="https://pbs.twimg.com/media/DXhaqT7VoAEGYql?format=jpg&name=large"> 
+<!-- Album Title -->
+		<p class="album-title">UNVEIL [Op. 01 : I am NOT]</p>
+<!-- Tags: Release date, album type, etc. -->
+	<p class="album-tag">March 25, 2018</p>
+	<p class="album-tag">Showcase</p>
+    <p class="album-tag">Debut</p>
+	</div>
+<!-- Right Side -->
+	<div class="album-card-r">
+<!-- Physical Album Cover -->
+	  <div class="album-container">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+    </div>
+<!-- More Tags -->   
+	    <p class="album-tag">&#x1F1F0;&#x1F1F7; Jang Chung Arena, Seoul</p>
+	    <p class="album-tag">3,500 Attendees</p>
+        <p class="album-tag"><a href="https://youtu.be/iF7OC8oSAOo?si=VyxuCo-B_adVMLIL" target="blank">VOD on YouTube</a></p>
+	</div>
 </div>
 <!-- Unveil [OP.01:I am NOT] --> <div class="member">
 <div>Bang Chan
@@ -446,7 +616,7 @@ so look forward to improvements in quality & functionality!</p>
     <img src="https://ndc.infludeo.com/media/photocard_blur/2024/12/22/7dc097b6bf81494190a69ed5c49051b2.jpg?f=auto&q=75&w=640" alt="Image failed :(" width="100%">
 </div>
 </div>
-<div class="poca"><span class="gold-text">Photocard Set</span></div>
+<div class="poca">Photocard Set</div>
 <div class="member">
 <div>Bang Chan
     <img src="https://ndc.infludeo.com/media/photocard_blur/2024/08/08/8e9c02cb5d664034a1862d6012fa9637.jpg?f=auto&q=75&w=640" alt="Image failed :(" width="100%">
@@ -534,12 +704,29 @@ so look forward to improvements in quality & functionality!</p>
     <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
     <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
 </div></div>
-<div class="poca"><span class="gold-text">Polaroid</span></div>
-
-<!-- I Am Who --> <div class="album">
-    <img src="https://upload.wikimedia.org/wikipedia/en/f/ff/Stray_Kids_I_Am_Who_album_cover.jpg" alt="Image failed :(" width="10%" id="iamwho">
-    <h1> I Am Who</h1>
-    <p> 2018 ~ Second Mini Album</p>
+<div class="poca">Polaroid</div>
+<!-- I Am Who -->
+<div class="album-card" id="iamwho">  
+<!-- Left Side -->
+	<div class="album-card-l">
+<!-- Digital Album Cover -->
+		<img class="album-cover" src="https://upload.wikimedia.org/wikipedia/en/f/ff/Stray_Kids_I_Am_Who_album_cover.jpg" alt=""> 
+<!-- Album Title -->
+		<p class="album-title">I am WHO</p>
+<!-- Tags: Release date, album type, etc. -->
+		<p class="album-tag">August 6, 2018</p>
+	  <p class="album-tag">Second Mini Album</p>
+	</div>
+<!-- Right Side -->
+	<div class="album-card-r">
+<!-- Physical Album Cover -->
+	  <div class="album-container">
+	    <img class="album-physical" src="https://www.subkshop.com/cdn/shop/products/skz_i-am-who_WHOver.jpg?v=1616324493&width=340">
+	    <img class="album-physical" src="https://www.subkshop.com/cdn/shop/products/skz_i-am-who_IAMver.jpg?v=1616324493&width=532">
+    </div>
+<!-- More Tags -->   
+		<p class="album-tag">2 Versions</p>
+	</div>
 </div>
 <!-- I Am Who --><div class="member">
 <div>Bang Chan
@@ -736,86 +923,61 @@ so look forward to improvements in quality & functionality!</p>
         <img src="https://ndc.infludeo.com/media/photocard_blur/2024/07/05/10ca1e4a78fa464885869f1bebdc73f6.jpg?f=auto&q=75&w=640" alt="Image failed :(" width="100%">
 </div>
 </div>
-<div class="poca"><span class="gold-text">Broadcast</span></div>
+<div class="poca broadcast">Broadcast</div>
 
-<!-- UNVEIL "Op. 02 : I am WHO" --> <div class="album">
-    <img src="non-ph-images/UNVEIL_IamWHO.webp" alt="Image failed :(" width="20%" id="iamwhouv">
-    <h1> UNVEIL "Op. 02 : I am WHO"</h1>
-    <p> 2018 ~ 2nd Showcase</p>
+<!-- UNVEIL "Op. 02 : I am WHO" --> <div class="album-card" id="iamwhouv">  
+<!-- Left Side -->
+	<div class="album-card-l">
+<!-- Digital Album Cover -->
+		<img class="album-cover" src="non-ph-images/UNVEIL_IamWHO.webp" alt=""> 
+<!-- Album Title -->
+		<p class="album-title">UNVEIL [Op. 02 : I am WHO]</p>
+<!-- Tags: Release date, album type, etc. -->
+		<p class="album-tag">Auggust 5, 2018</p>
+	  <p class="album-tag">Showcase</p>
+	</div>
+<!-- Right Side -->
+	<div class="album-card-r">
+<!-- Physical Album Cover -->
+	  <div class="album-container">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+    </div>
+<!-- More Tags -->   
+		<p class="album-tag">&#x1F1F0;&#x1F1F7; Grand Peace Palace, Seoul</p>
+	</div>
 </div>
-<!-- UNVEIL "Op. 02 : I am WHO" --> <div class="member">
-<div>Bang Chan
-        <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
+<!-- UNVEIL "Op. 02 : I am WHO" -->
+ <div class="poca">Polaroid (5 each member)</div>
+ <div class="poca">Lucky Envelope</div>
+ <div class="poca">Signed Polaroid (10 each)</div>
+<div class="info">
+  <p><strong>Tip!</strong> If you think anything on this site can be improved please go to <strong>Contact</strong> and submit the Google Forms.</p>
 </div>
-<div>Lee Know
-        <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
-</div>
-<div>Changbin
-        <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
-</div>
-<div>Hyunjin
-        <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
-</div>
-<div>Han
-        <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
-</div>
-<div>Felix
-        <img src="PlaceHolder.png" alt="Image failed :(" width="100%"></div>
-<div>Seungmin
-        <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
-</div>
-<div>I.N
-        <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
+<!-- I Am You --> <div class="album-card" id="iamyou">  
+<!-- Left Side -->
+	<div class="album-card-l">
+<!-- Digital Album Cover -->
+		<img class="album-cover" src="https://upload.wikimedia.org/wikipedia/en/1/11/I_Am_You_Album_Cover.jpeg" alt=""> 
+<!-- Album Title -->
+		<p class="album-title">I am YOU</p>
+<!-- Tags: Release date, album type, etc. -->
+		<p class="album-tag">October 22, 2018</p>
+	  <p class="album-tag">Mini Album</p>
+	</div>
+<!-- Right Side -->
+	<div class="album-card-r">
+<!-- Physical Album Cover -->
+	  <div class="album-container">
+	    <img class="album-physical" src="https://m.media-amazon.com/images/I/71QLSnL5nfL.jpg">
+	    <img class="album-physical" src="https://www.musicplaza.com/cdn/shop/products/stray_kids_i_am_you_C.jpg?v=1556610360">
+        <img class="album-physical" src="https://k-seong.eu/cdn/shop/files/product.17672.161156442266554.jpg?v=1751985850&width=1445">
 
-</div>
-</div>
-<div class="poca"><span class="gold-text">Polaroid Set</span></div>
-<div class="member">
-<div>Bang Chan
-         <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
-         
-         <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
-</div>
-<div>Lee Know
-         <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
-         
-         <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
-</div>
-<div>Changbin
-         <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
-         
-         <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
-</div>
-<div>Hyunjin
-         <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
-         
-         <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
-</div>
-<div>Han
-         <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
-         
-         <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
-</div>
-<div>Felix
-         <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
-         
-         <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
-</div>
-<div>Seungmin
-    <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
-    <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
-</div>
-<div>I.N
-    <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
-    <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
-</div>
-</div>
-<div class="poca"><span class="gold-text">Lucky Envelope</span></div>
-
-<!-- I Am You --> <div class="album">
-    <img src="https://upload.wikimedia.org/wikipedia/en/1/11/I_Am_You_Album_Cover.jpeg" alt="Image failed :(" width="10%" id="iamyou">
-    <h1> I Am You</h1>
-    <p> 2019 ~ Third Mini Album</p>
+    </div>
+<!-- More Tags -->   
+		<p class="album-tag">2 Versions</p>
+	</div>
 </div>
 <!-- I Am You --><div class="member">
 <div>Bang Chan
@@ -960,12 +1122,30 @@ so look forward to improvements in quality & functionality!</p>
         <img src="https://ndc.infludeo.com/media/photocard_blur/2024/07/05/34a111e93c0b4044813d1951f8b2bd5f.jpg?f=auto&q=75&w=640" alt="Image failed :(" width="100%">
 </div>
 </div>
-<div class="poca"><span class="pink-text">POB</span></div>
+<div class="poca">POB</div>
 
-<!-- I Am You: Special Edition --> <div class="album">
-    <img src="https://st.cdjapan.co.jp/pictures/l/15/05/NEOIMP-16487.jpg" alt="Image failed :(" width="10%" id="iamyoutw">
-    <h1> I Am You: Special Edition</h1>
-    <p> 2018 ~ Exclusive Taiwan Release</p>
+<!-- I Am You: Special Edition --> <div class="album-card" id="iamyoutw">  
+<!-- Left Side -->
+	<div class="album-card-l">
+<!-- Digital Album Cover -->
+		<img class="album-cover" src="https://st.cdjapan.co.jp/pictures/l/15/05/NEOIMP-16487.jpg" alt=""> 
+<!-- Album Title -->
+		<p class="album-title">I am You: Special Edition</p>
+<!-- Tags: Release date, album type, etc. -->
+		<p class="album-tag">January 29, 2019</p>
+	   <p class="album-tag">Mini Album</p>
+	</div>
+<!-- Right Side -->
+	<div class="album-card-r">
+<!-- Physical Album Cover -->
+	  <div class="album-container">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+    </div>
+<!-- More Tags -->   
+		<p class="album-tag">Exclusive Taiwan Release</p>
+	</div>
 </div>
 <!-- I Am You: Special Edition --><div class="member">
 <div>Bang Chan
@@ -1000,7 +1180,7 @@ so look forward to improvements in quality & functionality!</p>
 
 </div>
 </div>
-<div class="poca"><span class="gold-text">Taiwan Ver.</span></div>
+<div class="poca">Photocard</div>
 <div class="member">
 <div>Bang Chan
     <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
@@ -1039,97 +1219,58 @@ so look forward to improvements in quality & functionality!</p>
     <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
 </div>
 </div>
-<div class="poca"><span class="gold-text">Taiwan Polaroid</span></div>
+<div class="poca">Polaroid</div>
 
-<!-- UNVEIL "Op. 03 : I am YOU" --> <div class="album">
-    <img src="non-ph-images/UNVEIL__IamYOU.webp" alt="Image failed :(" width="20%" id="iamyouuv">
-    <h1> UNVEIL "Op. 03 : I am YOU"</h1>
-    <p> 2018 ~ 3rd Showcase</p>
+<!-- UNVEIL "Op. 03 : I am YOU" --><div class="album-card" id="iamyouuv">  
+<!-- Left Side -->
+	<div class="album-card-l">
+<!-- Digital Album Cover -->
+		<img class="album-cover" src="non-ph-images/UNVEIL__IamYOU.webp" alt=""> 
+<!-- Album Title -->
+		<p class="album-title">UNVEIL [Op. 03 : I am YOU]</p>
+<!-- Tags: Release date, album type, etc. -->
+		<p class="album-tag">October 21, 2018</p>
+	  <p class="album-tag">Showcase</p>
+	</div>
+<!-- Right Side -->
+	<div class="album-card-r">
+<!-- Physical Album Cover -->
+	  <div class="album-container">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+    </div>
+<!-- More Tags -->   
+		<p class="album-tag">&#x1F1F0;&#x1F1F7; Olympic Hall, Seoul</p>
+	</div>
 </div>
-<!-- UNVEIL "Op. 03 : I am YOU" --> <div class="member">
-<div>Bang Chan
-        <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
-</div>
-<div>Lee Know
-        <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
-</div>
-<div>Changbin
-        <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
-</div>
-<div>Hyunjin
-        <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
-</div>
-<div>Han
-        <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
-</div>
-<div>Felix
-        <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
-</div>
-<div>Seungmin
-        <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
-
-</div>
-<div>I.N
-        <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
-</div>
-</div>
-<div class="poca"><span class="gold-text">Polaroid Set</span></div>
-<div class="member">
-<div>Bang Chan
-
-         <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
-         
-         <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
-</div>
-<div>Lee Know
-
-         <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
-         
-         <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
-</div>
-<div>Changbin
- 
-         <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
-         
-         <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
-</div>
-<div>Hyunjin
-
-         <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
-         
-         <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
-</div>
-<div>Han
-
-         <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
-         
-         <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
-</div>
-<div>Felix
-
-         <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
-         
-         <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
-</div>
-<div>Seungmin
-
-         <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
-         
-         <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
-</div>
-<div>I.N
-
-         <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
-         
-         <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
-</div>
-</div>
-<div class="poca"><span class="gold-text">Lucky Envelope</span></div>
-
-<!-- MEET&GREET ~ I Am You --> <div class="album">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/PnxLQd9J7rE?si=uDbtkFBYbtrIEaGZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen id="iamyoumg"></iframe>
-    <h1>MEET&GREET ~ I Am You</h1>
-    <p> 2019 ~ 1st Online Fan Meeting</p>
+<!-- UNVEIL "Op. 03 : I am YOU" -->
+  <div class="poca">Polaroid (5 each member)</div>
+ <div class="poca">Lucky Envelope</div>
+ <div class="poca">Signed Polaroid (10 each)</div>
+<!-- MEET&GREET ~ I Am You --> <div class="album-card" id="iamyoumg">  
+<!-- Left Side -->
+	<div class="album-card-l">
+<!-- Digital Album Cover -->
+		<img class="album-cover" src="non-ph-images/MEETGREET_IamYOU.webp" alt=""> 
+        <iframe width="auto" height="auto" src="https://www.youtube.com/embed/PnxLQd9J7rE?si=uDbtkFBYbtrIEaGZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen id="iamyoumg"></iframe>
+<!-- Album Title -->
+		<p class="album-title">MWave [MEET&GREET]</p>
+<!-- Tags: Release date, album type, etc. -->
+		<p class="album-tag">November 19, 2018</p>
+	  <p class="album-tag">Fanmeeting</p>
+	</div>
+<!-- Right Side -->
+	<div class="album-card-r">
+<!-- Physical Album Cover -->
+	  <div class="album-container">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+    </div>
+<!-- More Tags -->   
+		
+	</div>
 </div>
  <!-- MEET&GREET ~ I Am You --><div class="member">
 <div>Bang Chan
@@ -1157,12 +1298,31 @@ so look forward to improvements in quality & functionality!</p>
     <img src="https://ndc.infludeo.com/media/photocard_blur/2024/07/05/8e73d9666ecd44d9a7fcc1573d240af5.jpg?f=auto&q=75&w=640" alt="Image failed :(" width="100%">
 </div>
 </div>
-<div class="poca">Meet&Greet</div>
+<div class="poca">I am YOU</div>
 
-<!-- Clé 1 : MIROH --> <div class="album">
-    <img src="https://upload.wikimedia.org/wikipedia/en/0/07/Stray_Kids_-_Cl%C3%A9_1_-_Miroh.png" alt="Image failed :(" width="10%" id="cle1">
-    <h1> Clé 1 : MIROH</h1>
-    <p> 2019 ~ 4th Mini Album, Released on 1-Year Anniversary</p>
+<!-- Clé 1 : MIROH --> <div class="album-card" id="cle1">  
+<!-- Left Side -->
+	<div class="album-card-l">
+<!-- Digital Album Cover -->
+		<img class="album-cover" src="https://upload.wikimedia.org/wikipedia/en/0/07/Stray_Kids_-_Cl%C3%A9_1_-_Miroh.png" alt=""> 
+<!-- Album Title -->
+		<p class="album-title">Clé 1 : MIROH</p>
+<!-- Tags: Release date, album type, etc. -->
+		<p class="album-tag">March 25, 2019</p>
+	  <p class="album-tag">Mini Album</p>
+	</div>
+<!-- Right Side -->
+	<div class="album-card-r">
+<!-- Physical Album Cover -->
+	  <div class="album-container">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+    </div>
+<!-- More Tags -->   
+		<p class="album-tag">Released on 1-Year Anniversary</p>
+        <p class="album-tag">3 Versions</p>
+	</div>
 </div>
 <!-- Clé 1 : MIROH -->
  <div class="member">
@@ -1366,12 +1526,68 @@ so look forward to improvements in quality & functionality!</p>
 </div>
 </div>
 <div class="poca">Limited</div>
+<div class="member">
+<div>Bang Chan
+    <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
+</div>
+<div>Lee Know    
+    <img src="PlaceHolder.png" alt="Image failed :(" width="100%"> 
 
-<!--Official Fanclub STAY: 1st --> <div class="album">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/5P-mftKqr4k?si=0SIJ3fCNHQpUUURw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen id="stay1st"></iframe>
-    <h1>STAY 1ST OFFICIAL FANSHIP KIT</h1>
-    <h1> Official Fanclub STAY: 1st Generation</h1>
-    <p> 2019 ~ 2nd Fanclub membership period, Active March 25, 2019 - February 28, 2021</p>
+</div>
+<div>Changbin
+        
+        <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
+    
+</div>
+<div>Hyunjin
+        
+        <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
+    
+</div>
+<div>Han
+        
+        <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
+    
+</div>
+<div>Felix
+        
+        <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
+    
+</div>
+<div>Seungmin
+        
+        <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
+    
+</div>
+<div>I.N
+    
+    <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
+</div>
+</div>
+<div class="poca broadcast">Broadcast</div>
+<!--Official Fanclub STAY: 1st --> <div class="album-card" id="stay1st">  
+<!-- Left Side -->
+	<div class="album-card-l">
+<!-- Digital Album Cover -->
+        <iframe width="auto" height="auto" src="https://www.youtube.com/embed/5P-mftKqr4k?si=0SIJ3fCNHQpUUURw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen id="stay1st"></iframe>
+
+<!-- Album Title -->
+		<p class="album-title">Official Fanclub STAY: 1st Generation</p>
+<!-- Tags: Release date, album type, etc. -->
+		<p class="album-tag">March 25, 2019 - February 28, 2021</p>
+	  <p class="album-tag">Fanclub Membership Kit</p>
+	</div>
+<!-- Right Side -->
+	<div class="album-card-r">
+<!-- Physical Album Cover -->
+	  <div class="album-container">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+    </div>
+<!-- More Tags -->   
+		
+	</div>
 </div>
 <!--Official Fanclub STAY: 1st --><div class="member">
 <div>Bang Chan
@@ -1401,10 +1617,28 @@ so look forward to improvements in quality & functionality!</p>
 </div>
 <div class="poca">Polaroid Set</div>
 
-<!-- Clé 2 : Yellow Wood --> <div class="album">
-<img src="https://upload.wikimedia.org/wikipedia/en/7/71/Stray_Kids_Yellow_Wood.jpg" width="10%" id="cle2">
-<h1>Clé 2 : Yellow Wood</h1>
-<p>2019 ~ 5th Mini Album, featuring re-recorded pre-debut songs</p>
+<!-- Clé 2 : Yellow Wood --> <div class="album-card" id="cle2">  
+<!-- Left Side -->
+	<div class="album-card-l">
+<!-- Digital Album Cover -->
+		<img class="album-cover" src="https://upload.wikimedia.org/wikipedia/en/7/71/Stray_Kids_Yellow_Wood.jpg" alt=""> 
+<!-- Album Title -->
+		<p class="album-title">Clé 2 : Yellow Wood</p>
+<!-- Tags: Release date, album type, etc. -->
+		<p class="album-tag">June 19, 2019</p>
+	  <p class="album-tag">Mini Album</p>
+	</div>
+<!-- Right Side -->
+	<div class="album-card-r">
+<!-- Physical Album Cover -->
+	  <div class="album-container">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+    </div>
+<!-- More Tags -->   
+		<p class="album-tag">3 Versions</p>
+	</div>
 </div>
 <!-- Clé 2 : Yellow Wood -->
  <div class="member">
@@ -1607,12 +1841,145 @@ so look forward to improvements in quality & functionality!</p>
         <img src="https://ndc.infludeo.com/media/photocard_blur/2024/07/08/d937375b76c5412a83a1152c3390b702.jpg?f=auto&q=75&w=256" alt="Image failed :(" width="100%">
 </div>
 </div>
-<div class="poca"><span class="pink-text">POB</span></div>
+<div class="poca">POB</div>
+<div class="member">
+<div>Bang Chan
+    <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
+</div>
+<div>Lee Know    
+    <img src="PlaceHolder.png" alt="Image failed :(" width="100%"> 
 
-<!--Clé 2 : Yellow Wood : Special Edition --> <div class="album">
-    <img src="https://st.cdjapan.co.jp/pictures/l/15/05/NEOIMP-16487.jpg" alt="Image failed :(" width="10%" id="cle2tw">
-    <h1> Clé 2 : Yellow Wood : Special Edition</h1>
-    <p> 2019 ~ Exclusive Taiwan Release</p>
+</div>
+<div>Changbin
+        
+        <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
+    
+</div>
+<div>Hyunjin
+        
+        <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
+    
+</div>
+<div>Han
+        
+        <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
+    
+</div>
+<div>Felix
+        
+        <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
+    
+</div>
+<div>Seungmin
+        
+        <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
+    
+</div>
+<div>I.N
+    
+    <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
+</div>
+</div>
+<div class="member">
+<div>Bang Chan
+    <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
+</div>
+<div>Lee Know    
+    <img src="PlaceHolder.png" alt="Image failed :(" width="100%"> 
+
+</div>
+<div>Changbin
+        
+        <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
+    
+</div>
+<div>Hyunjin
+        
+        <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
+    
+</div>
+<div>Han
+        
+        <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
+    
+</div>
+<div>Felix
+        
+        <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
+    
+</div>
+<div>Seungmin
+        
+        <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
+    
+</div>
+<div>I.N
+    
+    <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
+</div>
+</div>
+<div class="poca broadcast">Soundwave</div>
+<div class="member">
+<div>Bang Chan
+    <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
+</div>
+<div>Lee Know    
+    <img src="PlaceHolder.png" alt="Image failed :(" width="100%"> 
+
+</div>
+<div>Changbin
+        
+        <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
+    
+</div>
+<div>Hyunjin
+        
+        <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
+    
+</div>
+<div>Han
+        
+        <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
+    
+</div>
+<div>Felix
+        
+        <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
+    
+</div>
+<div>Seungmin
+        
+        <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
+    
+</div>
+<div>I.N
+    
+    <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
+</div>
+</div>
+<div class="poca broadcast">My Music Taste</div>
+<!--Clé 2 : Yellow Wood : Special Edition --> <div class="album-card" id="cle2tw">  
+<!-- Left Side -->
+	<div class="album-card-l">
+<!-- Digital Album Cover -->
+		<img class="album-cover" src="https://st.cdjapan.co.jp/pictures/l/15/05/NEOIMP-16487.jpg" alt=""> 
+<!-- Album Title -->
+		<p class="album-title">Clé 2 : Yellow Wood : Special Edition</p>
+<!-- Tags: Release date, album type, etc. -->
+		<p class="album-tag">June 19, 2019</p>
+	  <p class="album-tag">Mini Album</p>
+	</div>
+<!-- Right Side -->
+	<div class="album-card-r">
+<!-- Physical Album Cover -->
+	  <div class="album-container">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+    </div>
+<!-- More Tags -->   
+		<p class="album-tag">Exclusive Taiwan Release</p>
+	</div>
 </div>
 <!--Clé 2 : Yellow Wood : Special Edition --> <div class="member">
 <div>Bang Chan
@@ -1684,10 +2051,52 @@ so look forward to improvements in quality & functionality!</p>
 </div>
 <div class="poca">Polaroid</div>
 
-<!--Clé : Levanter--> <div class="album">
-<img src="https://upload.wikimedia.org/wikipedia/en/1/1c/Stray_Kids_-_Cl%C3%A9_Levanter.jpg" width="10%" id="cle3">
-<h1>Clé : Levanter</h1>
-<p>2019 ~ 6th Mini Album</p>
+<!-- Stay In London --> <div class="album-card" id="stayinlondon">  
+<!-- Left Side -->
+	<div class="album-card-l">
+<!-- Digital Album Cover -->
+        <iframe width="auto" height="auto" src="https://www.youtube.com/embed/lE4Tex4UruM?si=1ctVuJ7upPcHg1di" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<!-- Album Title -->
+		<p class="album-title">Stay in London</p>
+<!-- Tags: Release date, album type, etc. -->
+		<p class="album-tag">November 30, 2019</p>
+	  <p class="album-tag">Photobook</p>
+	</div>
+<!-- Right Side -->
+	<div class="album-card-r">
+<!-- Physical Album Cover -->
+	  <div class="album-container">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+    </div>
+<!-- More Tags -->   
+		
+	</div>
+</div>
+
+<!--Clé : Levanter--> <div class="album-card" id="cle3">  
+<!-- Left Side -->
+	<div class="album-card-l">
+<!-- Digital Album Cover -->
+		<img class="album-cover" src="https://upload.wikimedia.org/wikipedia/en/1/1c/Stray_Kids_-_Cl%C3%A9_Levanter.jpg" alt=""> 
+<!-- Album Title -->
+		<p class="album-title">Clé : LEVANTER</p>
+<!-- Tags: Release date, album type, etc. -->
+		<p class="album-tag">December 9, 2019</p>
+	  <p class="album-tag">Mini Album</p>
+	</div>
+<!-- Right Side -->
+	<div class="album-card-r">
+<!-- Physical Album Cover -->
+	  <div class="album-container">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+    </div>
+<!-- More Tags -->   
+		<p class="album-tag">3 Versions</p>
+	</div>
 </div>
 <!--Clé : Levanter--><div class="member">
 <div>Bang Chan
@@ -1857,32 +2266,81 @@ so look forward to improvements in quality & functionality!</p>
 </div>
 <div class="poca">Clé</div>
 
-<!--Step Out of Clé--> <div class="album">
-<img src="https://upload.wikimedia.org/wikipedia/en/e/e0/Stray_Kids_-_Step_Out_of_Cl%C3%A9.png" width="10%" >
-<h1 id="2020">Step Out of Clé</h1>
-<p>2020 ~ Digital Release (no physical album or photocards), First Full-English Songs</p>
-</div>
-
-<!--SKZ2020--> <div class="album">
-<img src="https://upload.wikimedia.org/wikipedia/en/3/3e/Stray_Kids_-_SKZ2020.jpg" width="10%" id="skz2020">
-<h1>SKZ2020</h1>
-<p>2020 ~ 1st Compilation Album + Japan Debut</p>
+<!--SKZ2020--> <div class="album-card" id="skz2020">  
+<!-- Left Side -->
+	<div class="album-card-l">
+<!-- Digital Album Cover -->
+		<img class="album-cover" src="https://upload.wikimedia.org/wikipedia/en/3/3e/Stray_Kids_-_SKZ2020.jpg" alt=""> 
+<!-- Album Title -->
+		<p class="album-title">SKZ2020</p>
+<!-- Tags: Release date, album type, etc. -->
+		<p class="album-tag">March 18, 2020</p>
+	  <p class="album-tag">Compilation Album</p>
+      <p class="album-tag">Japan Debut</p>
+	</div>
+<!-- Right Side -->
+	<div class="album-card-r">
+<!-- Physical Album Cover -->
+	  <div class="album-container">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+    </div>
+<!-- More Tags -->   
+		<p class="album-tag">4 Versions</p>
+	</div>
 </div>
 <!--SKZ2020-->
 <div class="poca">*Japanese photocards coming soon*</div>
 
-<!-- TOP --> <div class="album">
-<img src="https://upload.wikimedia.org/wikipedia/en/a/a5/Stray_Kids_-_Top_%28Korean_ver.%29.jpg" width="10%" id="topjp">
-<h1>TOP</h1>
-<p>2020 ~ Japanese Release, OST for "Tower of God"</p>
+<!-- TOP --> <div class="album-card" id="topjp">  
+<!-- Left Side -->
+	<div class="album-card-l">
+<!-- Digital Album Cover -->
+		<img class="album-cover" src="https://upload.wikimedia.org/wikipedia/en/a/a5/Stray_Kids_-_Top_%28Korean_ver.%29.jpg" alt=""> 
+<!-- Album Title -->
+		<p class="album-title">TOP -Japanese Ver-</p>
+<!-- Tags: Release date, album type, etc. -->
+		<p class="album-tag">June 3, 2020</p>
+	  <p class="album-tag">OST</p>
+	</div>
+<!-- Right Side -->
+	<div class="album-card-r">
+<!-- Physical Album Cover -->
+	  <div class="album-container">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+    </div>
+<!-- More Tags -->   
+		<p class="album-tag">5 Versions</p>
+	</div>
 </div>
 <!-- TOP -->
 <div class="poca">*Japanese photocards coming soon*</div>
 
-<!--GO生--> <div class="album">
-<img src="https://upload.wikimedia.org/wikipedia/en/2/2b/Stray_Kids_-_Go_Live.png" width="10%" id="golive">
-<h1>GO生 (Go Live)</h1>
-<p>2020 ~ 1st Full Album</p>
+<!--GO生--> <div class="album-card" id="golive">  
+<!-- Left Side -->
+	<div class="album-card-l">
+<!-- Digital Album Cover -->
+		<img class="album-cover" src="https://upload.wikimedia.org/wikipedia/en/2/2b/Stray_Kids_-_Go_Live.png" alt=""> 
+<!-- Album Title -->
+		<p class="album-title">GO生 (GO LIVE)</p>
+<!-- Tags: Release date, album type, etc. -->
+		<p class="album-tag">June 17, 2020</p>
+	  <p class="album-tag">Full Album</p>
+	</div>
+<!-- Right Side -->
+	<div class="album-card-r">
+<!-- Physical Album Cover -->
+	  <div class="album-container">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+    </div>
+<!-- More Tags -->   
+		<p class="album-tag">4 Versions</p>
+	</div>
 </div>
 <!--GO生-->
 <div class="member">
@@ -2120,13 +2578,31 @@ so look forward to improvements in quality & functionality!</p>
     <img src="PlaceHolder.png" alt="Image failed :(" width="100%">
 </div>
 </div>
-<div class="poca"><span class="pink-text">Polaroid</span></div>
+<div class="poca">Polaroid</div>
 
-<!-- <p> This is an example of a double-sided photocard </p>-->
-<!--IN生--> <div class="album">
-<img src="https://upload.wikimedia.org/wikipedia/en/a/a3/In_Life_2020.jpg" width="10%" id="inlife">
-<h1>IN生 (In Life)</h1>
-<p>2020 ~ 1st Repackaged Album</p>
+<!--IN生--> <div class="album-card" id="inlife">  
+<!-- Left Side -->
+	<div class="album-card-l">
+<!-- Digital Album Cover -->
+		<img class="album-cover" src="https://upload.wikimedia.org/wikipedia/en/a/a3/In_Life_2020.jpg" alt=""> 
+<!-- Album Title -->
+		<p class="album-title">IN生 (IN LIFE)</p>
+<!-- Tags: Release date, album type, etc. -->
+		<p class="album-tag">September 14, 2020</p>
+	  <p class="album-tag">Repackaged Album</p>
+	</div>
+<!-- Right Side -->
+	<div class="album-card-r">
+<!-- Physical Album Cover -->
+	  <div class="album-container">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+    </div>
+<!-- More Tags -->   
+		<p class="album-tag">Repackage of GO LIVE</p>
+        <p class="album-tag">3 Versions</p>
+	</div>
 </div>
 <!--IN生--><div class="member">
 <div>Bang Chan
@@ -2226,18 +2702,79 @@ so look forward to improvements in quality & functionality!</p>
 </div>
 <div class="poca">Concept</div>
 
-<!-- ALL IN --> <div class="album">
-<img src="https://upload.wikimedia.org/wikipedia/en/2/2b/Stray_Kids_-_All_In_%28Regular%29.jpg" width="20%" id="allin">
-<h1>ALL IN</h1>
-<p>2020 ~ 1st Japanese EP</p>
+<!-- Stay in Playground --> <div class="album-card" id="stayinplayground">  
+<!-- Left Side -->
+	<div class="album-card-l">
+<!-- Digital Album Cover -->
+		<img class="album-cover" src="" alt=""> 
+        <iframe width="auto" height="auto" src="https://www.youtube.com/embed/mmUu-IVRmR8?si=UjjKd9WzvaIyaUXP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<!-- Album Title -->
+		<p class="album-title">Stay in Playground</p>
+<!-- Tags: Release date, album type, etc. -->
+		<p class="album-tag">August 31, 2020</p>
+	  <p class="album-tag">Photobook</p>
+	</div>
+<!-- Right Side -->
+	<div class="album-card-r">
+<!-- Physical Album Cover -->
+	  <div class="album-container">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+    </div>
+<!-- More Tags -->   
+		
+	</div>
+</div>
+
+<!-- ALL IN --> <div class="album-card" id="allin">  
+<!-- Left Side -->
+	<div class="album-card-l">
+<!-- Digital Album Cover -->
+		<img class="album-cover" src="https://upload.wikimedia.org/wikipedia/en/2/2b/Stray_Kids_-_All_In_%28Regular%29.jpg" alt=""> 
+<!-- Album Title -->
+		<p class="album-title">ALL IN</p>
+<!-- Tags: Release date, album type, etc. -->
+		<p class="album-tag">October 27, 2020</p>
+	  <p class="album-tag">Japanese EP</p>
+	</div>
+<!-- Right Side -->
+	<div class="album-card-r">
+<!-- Physical Album Cover -->
+	  <div class="album-container">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+    </div>
+<!-- More Tags -->   
+		<p class="album-tag">4 Versions</p>
+	</div>
 </div>
 <!-- ALL IN -->
  <div class="poca">*Japanese photocards coming soon*</div>
 
-<!-- NOEASY --> <div class="album">
-    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/59/Stray_Kids_-_Noeasy_%28Digital%29.jpeg/250px-Stray_Kids_-_Noeasy_%28Digital%29.jpeg" alt="Image failed :(" width="20%" id="noeasy">
-    <h1> NOEASY</h1>
-    <p> 2021 ~ 2nd full album</p>
+<!-- NOEASY --> <div class="album-card" id="noeasy">  
+<!-- Left Side -->
+	<div class="album-card-l">
+<!-- Digital Album Cover -->
+		<img class="album-cover" src="https://upload.wikimedia.org/wikipedia/en/thumb/5/59/Stray_Kids_-_Noeasy_%28Digital%29.jpeg/250px-Stray_Kids_-_Noeasy_%28Digital%29.jpeg" alt=""> 
+<!-- Album Title -->
+		<p class="album-title">NOEASY</p>
+<!-- Tags: Release date, album type, etc. -->
+		<p class="album-tag">August 23, 2021</p>
+	  <p class="album-tag">Full Album</p>
+	</div>
+<!-- Right Side -->
+	<div class="album-card-r">
+<!-- Physical Album Cover -->
+	  <div class="album-container">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+    </div>
+<!-- More Tags -->   
+		<p class="album-tag">4 Versions</p>
+	</div>
 </div>
 <!-- NOEASY --><div class="member">
 <div>Bang Chan
@@ -2472,18 +3009,54 @@ so look forward to improvements in quality & functionality!</p>
 <div class="poca">Jewel Case</div>
 <div class="poca">*Store POBs coming soon*</div>
 
-<!-- Scars --> <div class="album">
-    <img src="https://upload.wikimedia.org/wikipedia/en/6/67/Stray_Kids_-_Scars_-_Thunderous_Japanese.jpeg" alt="Image failed :(" width="20%" id="scars">
-    <h1> Scars</h1>
-    <p> 2021 ~ Japanese Release</p>
+<!-- Scars --> <div class="album-card" id="scars">  
+<!-- Left Side -->
+	<div class="album-card-l">
+<!-- Digital Album Cover -->
+		<img class="album-cover" src="https://upload.wikimedia.org/wikipedia/en/6/67/Stray_Kids_-_Scars_-_Thunderous_Japanese.jpeg" alt=""> 
+<!-- Album Title -->
+		<p class="album-title">Scars / ソリクン -Japanese ver.-</p>
+<!-- Tags: Release date, album type, etc. -->
+		<p class="album-tag">October 13, 2021</p>
+	  <p class="album-tag">Japanese Single</p>
+	</div>
+<!-- Right Side -->
+	<div class="album-card-r">
+<!-- Physical Album Cover -->
+	  <div class="album-container">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+    </div>
+<!-- More Tags -->   
+		<p class="album-tag">5 Versions</p>
+	</div>
 </div>
 <!-- Scars -->
 <div class="poca">*Japanese photocards coming soon*</div>
 
-<!-- Christmas EveL --> <div class="album">
-    <img src="https://upload.wikimedia.org/wikipedia/en/9/9f/Stray_Kids_-_Christmas_EveL.jpeg" alt="Image failed :(" width="20%" id="evel">
-    <h1> Christmas EveL</h1>
-    <p> 2021 ~ Holiday Special Album</p>
+<!-- Christmas EveL --> <div class="album-card" id="evel">  
+<!-- Left Side -->
+	<div class="album-card-l">
+<!-- Digital Album Cover -->
+		<img class="album-cover" src="https://upload.wikimedia.org/wikipedia/en/9/9f/Stray_Kids_-_Christmas_EveL.jpeg" alt=""> 
+<!-- Album Title -->
+		<p class="album-title">Christmas EveL</p>
+<!-- Tags: Release date, album type, etc. -->
+		<p class="album-tag">November 29, 2021</p>
+	  <p class="album-tag">Holiday Special Single</p>
+	</div>
+<!-- Right Side -->
+	<div class="album-card-r">
+<!-- Physical Album Cover -->
+	  <div class="album-container">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+    </div>
+<!-- More Tags -->   
+		<p class="album-tag">2 Versions</p>
+	</div>
 </div>
 <!-- Christmas EveL --> <div class="member">
 <div>Bang Chan
@@ -2595,21 +3168,53 @@ so look forward to improvements in quality & functionality!</p>
 </div>
 <div class="poca">POB Set</div>
 
-<!--Official Fanclub STAY: 2nd, between NOEASY & Christmas Evel --> <div class="album">
-    <img src="non-ph-images/Fanclub-2NDGEN-Poster.webp" alt="Image failed :(" width="20%" id="stay2nd">
-    <h1> Official Fanclub STAY: 2nd Generation</h1>
-    <p> 2021 ~ Active October 25, 2021 - October 24, 2022</p>
+<!--Official Fanclub STAY: 2nd, between NOEASY & Christmas Evel --> <div class="album-card" id="stay2nd">  
+<!-- Left Side -->
+	<div class="album-card-l">
+<!-- Digital Album Cover -->
+		<img class="album-cover" src="non-ph-images/Fanclub-2NDGEN-Poster.webp" alt=""> 
+<!-- Album Title -->
+		<p class="album-title">Official Fanclub STAY: 2nd Generation</p>
+        <p class="album-title">You Make Stray Kids STAY</p>
+<!-- Tags: Release date, album type, etc. -->
+		<p class="album-tag">October 25, 2021 - October 24, 2022</p>
+	  <p class="album-tag">Fanclub Membership Kit</p>
+	</div>
+<!-- Right Side -->
+	<div class="album-card-r">
+<!-- Physical Album Cover -->
+	  <div class="album-container">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+    </div>
+<!-- More Tags -->   
+
+	</div>
 </div>
 
-<!-- SKZ2021 --> <div class="album">
-    <img src="https://upload.wikimedia.org/wikipedia/en/a/ad/Stray_Kids_-_SKZ2021.jpeg" alt="Image failed :(" width="20%">
-    <h1> SKZ2021</h1>
-    <p> 2021 ~ 2nd Compilation Album, Digital Release (No Physical Merch)</p>
-</div>
-<!-- Oddinary --> <div class="album">
-    <img src="https://upload.wikimedia.org/wikipedia/en/4/45/Stray_Kids_-_Oddinary.jpeg" alt="Image failed :(" width="20%" id="odd">
-    <h1 id="2022"> Oddinary</h1>
-    <p> 2022 ~ 6th Mini Album</p>
+<!-- Oddinary --> <div class="album-card" id="odd">  
+<!-- Left Side -->
+	<div class="album-card-l">
+<!-- Digital Album Cover -->
+		<img class="album-cover" src="https://upload.wikimedia.org/wikipedia/en/4/45/Stray_Kids_-_Oddinary.jpeg" alt=""> 
+<!-- Album Title -->
+		<p class="album-title">ODDINARY</p>
+<!-- Tags: Release date, album type, etc. -->
+		<p class="album-tag">March 18, 2022</p>
+	  <p class="album-tag">Mini Album</p>
+	</div>
+<!-- Right Side -->
+	<div class="album-card-r">
+<!-- Physical Album Cover -->
+	  <div class="album-container">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+    </div>
+<!-- More Tags -->   
+		<p class="album-tag">4 Versions</p>
+	</div>
 </div>
 <!-- Oddinary --> <div class="member">
 <div>Bang Chan
@@ -2747,18 +3352,54 @@ so look forward to improvements in quality & functionality!</p>
 </div>
 <div class="poca">Jewel Case</div>
 
-<!-- Circus --> <div class="album">
-    <img src="https://upload.wikimedia.org/wikipedia/en/8/82/Stray_Kids_-_Circus_%28Regular%29.jpeg" alt="Image failed :(" width="20%" id="circus">
-    <h1> Circus</h1>
-    <p> 2022 ~ 2nd Japanese EP</p>
+<!-- Circus --> <div class="album-card" id="circus">  
+<!-- Left Side -->
+	<div class="album-card-l">
+<!-- Digital Album Cover -->
+		<img class="album-cover" src="https://upload.wikimedia.org/wikipedia/en/8/82/Stray_Kids_-_Circus_%28Regular%29.jpeg" alt=""> 
+<!-- Album Title -->
+		<p class="album-title">CIRCUS</p>
+<!-- Tags: Release date, album type, etc. -->
+		<p class="album-tag">June 22, 2022</p>
+	  <p class="album-tag">Japanese EP</p>
+	</div>
+<!-- Right Side -->
+	<div class="album-card-r">
+<!-- Physical Album Cover -->
+	  <div class="album-container">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+    </div>
+<!-- More Tags -->   
+		<p class="album-tag">4 Versions</p>
+	</div>
 </div>
 <!-- Circus -->
  <div class="poca">*Japanese photocards coming soon*</div>
  
-<!-- Maxident --> <div class="album">
-    <img src="https://upload.wikimedia.org/wikipedia/en/d/de/Stray_Kids_-_Maxident.png" alt="Image failed :(" width="20%" id="max">
-    <h1> Maxident</h1>
-    <p> 2022 ~ 7th Mini Album</p>
+<!-- Maxident --> <div class="album-card" id="max">  
+<!-- Left Side -->
+	<div class="album-card-l">
+<!-- Digital Album Cover -->
+		<img class="album-cover" src="https://upload.wikimedia.org/wikipedia/en/d/de/Stray_Kids_-_Maxident.png" alt=""> 
+<!-- Album Title -->
+		<p class="album-title">MAXIDENT</p>
+<!-- Tags: Release date, album type, etc. -->
+		<p class="album-tag">October 7, 2022</p>
+	  <p class="album-tag">Mini Album</p>
+	</div>
+<!-- Right Side -->
+	<div class="album-card-r">
+<!-- Physical Album Cover -->
+	  <div class="album-container">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+    </div>
+<!-- More Tags -->   
+		<p class="album-tag">4 Versions</p>
+	</div>
 </div>
 <!-- Maxident --> <div class="member">
 <div>Bang Chan
@@ -2867,7 +3508,7 @@ so look forward to improvements in quality & functionality!</p>
 <img src="https://ndc.infludeo.com/media/photocard_blur/2024/07/31/ba9e440938544ab7861eb6cb709f6f1c.jpg?f=auto&q=75&w=256" alt="Image failed :(" width="100%">
 </div>
 </div>
-<div class="poca"><span class="pink-text">Polaroid POB</span></div>
+<div class="poca">Polaroid POB</div>
 <div class="member">
 <div>Bang Chan
 <img src="https://ndc.infludeo.com/media/photocard_blur/2024/07/31/9630e76da54947a1874a43f65bbe4740.jpg?f=auto&q=75&w=256" alt="Image failed :(" width="100%">
@@ -2921,84 +3562,133 @@ so look forward to improvements in quality & functionality!</p>
 <img src="https://ndc.infludeo.com/media/photocard_blur/2024/07/31/454868ecbb294690beffc0523fb2a020.jpg?f=auto&q=75&w=256" alt="Image failed :(" width="100%">
 </div>
 </div>
-<div class="poca"><span class="pink-text">Case POB</span></div>
+<div class="poca">Case POB</div>
 
-<!--Official Fanclub STAY: 3rd --> <div class="album">
-    <img src="non-ph-images/Fanclub_3rd_Gen_Preview_Poster.webp" alt="Image failed :(" width="20%" id="stay3rd">
-    <h1> Official Fanclub STAY: 3rd Generation</h1>
-    <p> 2022 ~ Active October 27, 2022 - December 31, 2023 (Includes SKZ-Replay).</p>
-</div>
-<!--Official Fanclub STAY: 3rd --> <div class="member">
-<div>Bang Chan
-
-</div>
-<div>Lee Know
-
-</div>
-<div>Changbin
-
-</div>
-<div>Hyunjin
-
-</div>
-<div>Han
-
-</div>
-<div>Felix
-
-</div>
-<div>Seungmin
-
-</div>
-<div>I.N
-
-</div>
+<!--Official Fanclub STAY: 3rd --> <div class="album-card" id="stay3rd">  
+<!-- Left Side -->
+	<div class="album-card-l">
+<!-- Digital Album Cover -->
+		<img class="album-cover" src="non-ph-images/Fanclub_3rd_Gen_Preview_Poster.webp" alt=""> 
+<!-- Album Title -->
+		<p class="album-title">Official Fanclub STAY: 3rd Generation</p>
+        <p class="album-title">Home Sweet Home</p>
+<!-- Tags: Release date, album type, etc. -->
+		<p class="album-tag">October 27, 2022 - December 31, 2023</p>
+	  <p class="album-tag">Fanclub Membership Kit</p>
+	</div>
+<!-- Right Side -->
+	<div class="album-card-r">
+<!-- Physical Album Cover -->
+	  <div class="album-container">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+    </div>
+<!-- More Tags -->   
+		<p class="album-tag">Includes SKZ-REPLAY</p>
+	</div>
 </div>
 
-<!-- SKZ-Replay --> <div class="album">
-    <img src="https://upload.wikimedia.org/wikipedia/en/4/4c/Stray_Kids_-_SKZ-Replay.png" alt="Image failed :(" width="20%" id="skzreplay">
-    <h1> SKZ-Replay</h1>
-    <p> 2022 ~ 3rd Compilation Album (The physical album came included in Official Fanclub STAY: 3rd Generation. It was not sold seperately).</p>
-</div>
-<!-- SKZ-Replay --> <div class="member">
-<div>Bang Chan
-
-</div>
-<div>Lee Know
-
-</div>
-<div>Changbin
-
-</div>
-<div>Hyunjin
-
-</div>
-<div>Han
-
-</div>
-<div>Felix
-
-</div>
-<div>Seungmin
-
-</div>
-<div>I.N
-
-</div>
+<!-- SKZ-Replay --> <div class="album-card" id="skzreplay">  
+<!-- Left Side -->
+	<div class="album-card-l">
+<!-- Digital Album Cover -->
+		<img class="album-cover" src="https://upload.wikimedia.org/wikipedia/en/4/4c/Stray_Kids_-_SKZ-Replay.png" alt=""> 
+<!-- Album Title -->
+		<p class="album-title">SKZ-REPLAY</p>
+<!-- Tags: Release date, album type, etc. -->
+		<p class="album-tag">December 21, 2023</p>
+	  <p class="album-tag">Compilation Album</p>
+	</div>
+<!-- Right Side -->
+	<div class="album-card-r">
+<!-- Physical Album Cover -->
+	  <div class="album-container">
+	    <img class="album-physical" src="https://pbs.twimg.com/media/FhGHDT4aMAAtlAr?format=jpg&name=large">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+    </div>
+<!-- More Tags -->   
+        <p class="album-tag">Full Album (A-Side + B-Side) Digital Only</p>
+        <p class="album-tag">Physical version of A-Side included in STAY: 3rd Generation Kit</p>
+	</div>
 </div>
 
-<!-- The Sound --> <div class="album">
-    <img src="https://upload.wikimedia.org/wikipedia/en/8/8f/Stray_Kids_-_The_Sound.png" alt="Image failed :(" width="20%" id="sound">
-    <h1> The Sound</h1>
-    <p> 2023 ~ 3rd Japanese Album</p>
+<!-- Stay in Stay in Jeju --> <div class="album-card" id="stayinstay">  
+<!-- Left Side -->
+	<div class="album-card-l">
+<!-- Digital Album Cover -->
+		<img class="album-cover" src="" alt="">
+        <iframe width="auto" height="auto" src="https://www.youtube.com/embed/jJKlFj5_Njw?si=hzG8x_fw3dOm0uQy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        
+<!-- Album Title -->
+		<p class="album-title">Stay in Stay</p>
+<!-- Tags: Release date, album type, etc. -->
+		<p class="album-tag">November 25, 2022</p>
+	  <p class="album-tag">Photobook</p>
+	</div>
+<!-- Right Side -->
+	<div class="album-card-r">
+<!-- Physical Album Cover -->
+	  <div class="album-container">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+        <iframe width="auto" height="auto" src="https://www.youtube.com/embed/eF_d4tZq8TE?si=T9-Zy83zs5jxt7LX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+<!-- More Tags -->   
+		
+	</div>
+</div>
+
+<!-- The Sound --> <div class="album-card" id="sound">  
+<!-- Left Side -->
+	<div class="album-card-l">
+<!-- Digital Album Cover -->
+		<img class="album-cover" src="https://upload.wikimedia.org/wikipedia/en/8/8f/Stray_Kids_-_The_Sound.png" alt=""> 
+<!-- Album Title -->
+		<p class="album-title">THE SOUND</p>
+<!-- Tags: Release date, album type, etc. -->
+		<p class="album-tag">February 22, 2023</p>
+	  <p class="album-tag">Japanese Full Album</p>
+	</div>
+<!-- Right Side -->
+	<div class="album-card-r">
+<!-- Physical Album Cover -->
+	  <div class="album-container">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+    </div>
+<!-- More Tags -->   
+		<p class="album-tag">4 Versions</p>
+	</div>
 </div>
 <!-- The Sound -->
  <div class="poca">*Japanese photocards coming soon*</div>
  
-<!-- 5-STAR --> <div class="album">
-    <img src="https://upload.wikimedia.org/wikipedia/en/5/52/Stray_Kids_-_5-Star.png" alt="Image failed :(" width="20%" id="5star">
-    <h1> 5-STAR</h1>
-    <p> 2023 ~ 3rd Full Album</p>
+<!-- 5-STAR --> <div class="album-card" id="5star">  
+<!-- Left Side -->
+	<div class="album-card-l">
+<!-- Digital Album Cover -->
+		<img class="album-cover" src="https://upload.wikimedia.org/wikipedia/en/5/52/Stray_Kids_-_5-Star.png" alt=""> 
+<!-- Album Title -->
+		<p class="album-title">★★★★★ (5-STAR)</p>
+<!-- Tags: Release date, album type, etc. -->
+		<p class="album-tag">June 2, 2023</p>
+	  <p class="album-tag">Full Album</p>
+	</div>
+<!-- Right Side -->
+	<div class="album-card-r">
+<!-- Physical Album Cover -->
+	  <div class="album-container">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+    </div>
+<!-- More Tags -->   
+		<p class="album-tag">5 Versions</p>
+	</div>
 </div>
 <!-- 5-STAR --> <div class="member">
 <div>Bang Chan
@@ -3134,21 +3824,56 @@ so look forward to improvements in quality & functionality!</p>
 <img src="https://ndc.infludeo.com/media/photocard_blur/2024/08/28/e4e42b6789d547c7b549e6f430377079.jpg?f=auto&q=75&w=256" alt="Image failed :(" width="100%">
 </div>
 </div>
-<div class="poca"><span class="pink-text">Digipack POB</span></div>
+<div class="poca">Digipack POB</div>
 
-<!-- Social Path --> <div class="album">
-    <img src="https://upload.wikimedia.org/wikipedia/en/d/d5/Stray_Kids_-_Social_Path_%28Feat._Lisa%29_Super_Bowl_%28Japanese_Ver.%29.png" alt="Image failed :(" width="20%" id="socialpath">
-    <h1> Social Path</h1>
-    <p> 2023 ~ 3rd Japanese EP</p>
+<!-- Social Path --> <div class="album-card" id="socialpath">  
+<!-- Left Side -->
+	<div class="album-card-l">
+<!-- Digital Album Cover -->
+		<img class="album-cover" src="https://upload.wikimedia.org/wikipedia/en/d/d5/Stray_Kids_-_Social_Path_%28Feat._Lisa%29_Super_Bowl_%28Japanese_Ver.%29.png" alt=""> 
+<!-- Album Title -->
+		<p class="album-title">Social Path (feat. LiSA) / Super Bowl (Japanese ver.)</p>
+<!-- Tags: Release date, album type, etc. -->
+		<p class="album-tag">September 6, 2023</p>
+	  <p class="album-tag">Japanese EP</p>
+	</div>
+<!-- Right Side -->
+	<div class="album-card-r">
+<!-- Physical Album Cover -->
+	  <div class="album-container">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+    </div>
+<!-- More Tags -->   
+		<p class="album-tag">4 Versions</p>
+	</div>
 </div>
 <!-- Social Path -->
  <div class="poca">*Japanese photocards coming soon*</div>
  
-<!-- Rock-Star --> <div class="album">
-    <img src="https://upload.wikimedia.org/wikipedia/en/5/51/Stray_Kids_-_Rock-Star.png" alt="Image failed :(" width="20%" id="rockstar">
-    <h1>樂-STAR</h1>
-    <h1> Rock-Star</h1>
-    <p> 2023 ~ 8th Korean EP</p>
+<!-- Rock-Star --> <div class="album-card" id="rockstar">  
+<!-- Left Side -->
+	<div class="album-card-l">
+<!-- Digital Album Cover -->
+		<img class="album-cover" src="https://upload.wikimedia.org/wikipedia/en/5/51/Stray_Kids_-_Rock-Star.png" alt=""> 
+<!-- Album Title -->
+		<p class="album-title">樂-STAR (ROCK-STAR)</p>
+<!-- Tags: Release date, album type, etc. -->
+		<p class="album-tag">November 10, 2023</p>
+	  <p class="album-tag">Mini Album</p>
+	</div>
+<!-- Right Side -->
+	<div class="album-card-r">
+<!-- Physical Album Cover -->
+	  <div class="album-container">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+    </div>
+<!-- More Tags -->   
+		<p class="album-tag">6 Versions</p>
+	</div>
 </div>
 <!-- Rock-Star --> <div class="member">
 <div>Bang Chan
@@ -3257,7 +3982,7 @@ so look forward to improvements in quality & functionality!</p>
 <img src="https://ndc.infludeo.com/media/photocard_blur/2024/08/28/384ac6a187494345baeb78f4fc972b98.jpg?f=auto&q=75&w=256" alt="Image failed :(" width="100%">
 </div>
 </div>
-<div class="poca"><span class="pink-text">Postcard POB</span></div>
+<div class="poca">Postcard POB</div>
 <div class="member">
 <div>Bang Chan
 <img src="https://ndc.infludeo.com/media/photocard_blur/2024/12/22/cca37248b62b4cba80fe70f6cf2ef0f7.jpg?f=auto&q=75&w=256" alt="Image failed :(" width="100%">
@@ -3311,7 +4036,7 @@ so look forward to improvements in quality & functionality!</p>
 <img src="https://ndc.infludeo.com/media/photocard_blur/2024/08/28/e2c0c9475d3f4351851fa4cd9c1240ad.jpg?f=auto&q=75&w=256" alt="Image failed :(" width="100%">
 </div>
 </div>
-<div class="poca"><span class="pink-text">Film Set POB</span></div>
+<div class="poca">Film Set POB</div>
 <div class="member">
 <div>Chan & Changbin
 <img src="https://ndc.infludeo.com/media/photocard_blur/2023/11/13/041970ec85be4e12b1fc1684608da603.jpg?f=auto&q=75&w=256" alt="Image failed :(" width="100%">
@@ -3355,15 +4080,52 @@ so look forward to improvements in quality & functionality!</p>
 </div>
 <div class="poca">Nemo</div>
 
-<!--Official Fanclub STAY: 4th --> <div class="album">
-    <img src="non-ph-images/Fanclub_4th_Gen_Preview_Poster.webp" alt="Image failed :(" width="20%" id="stay4th">
-    <h1> Official Fanclub STAY: 4th Generation</h1>
-    <p> 2024 ~ Active January 15, 2024 - January 17, 2025</p>
+<!--Official Fanclub STAY: 4th --> <div class="album-card" id="stay4th">  
+<!-- Left Side -->
+	<div class="album-card-l">
+<!-- Digital Album Cover -->
+		<img class="album-cover" src="non-ph-images/Fanclub_4th_Gen_Preview_Poster.webp" alt=""> 
+<!-- Album Title -->
+		<p class="album-title">STAY HIDEOUT</p>
+        <p class="album-title">Official Fanclub STAY: 4th Generation</p>
+<!-- Tags: Release date, album type, etc. -->
+		<p class="album-tag">January 15, 2024 - January 17, 2025</p>
+	  <p class="album-tag">Fanclub Membership Kit</p>
+	</div>
+<!-- Right Side -->
+	<div class="album-card-r">
+<!-- Physical Album Cover -->
+	  <div class="album-container">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+    </div>
+<!-- More Tags -->   
+		
+	</div>
 </div>
-<!-- ATE --> <div class="album">
-    <img src="https://upload.wikimedia.org/wikipedia/en/d/d6/Stray_Kids_-_Ate.png" alt="Image failed :(" width="20%" id="ate">
-    <h1 id="2024"> ATE</h1>
-    <p> 2024 ~ 9th Korean EP</p>
+<!-- ATE --> <div class="album-card" id="ate">  
+<!-- Left Side -->
+	<div class="album-card-l">
+<!-- Digital Album Cover -->
+		<img class="album-cover" src="https://upload.wikimedia.org/wikipedia/en/d/d6/Stray_Kids_-_Ate.png" alt=""> 
+<!-- Album Title -->
+		<p class="album-title">ATE</p>
+<!-- Tags: Release date, album type, etc. -->
+		<p class="album-tag">July 19, 2024</p>
+	  <p class="album-tag">Mini Album</p>
+	</div>
+<!-- Right Side -->
+	<div class="album-card-r">
+<!-- Physical Album Cover -->
+	  <div class="album-container">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+    </div>
+<!-- More Tags -->   
+		<p class="album-tag">6 Versions</p>
+	</div>
 </div>
 <!-- ATE --> <div class="member">
 <div>Bang Chan
@@ -3529,7 +4291,7 @@ so look forward to improvements in quality & functionality!</p>
 <img src="https://ndc.infludeo.com/media/photocard_blur/2024/08/28/8f85cc652ebc4663b9129c2d5ba3f8fc.jpg?f=auto&q=75&w=256" alt="Image failed :(" width="100%">
 </div>
 </div>
-<div class="poca"><span class="pink-text">Accordion POB</span></div>
+<div class="poca">Accordion POB</div>
 <div class="member">
 <div>Bang Chan
 <img src="https://ndc.infludeo.com/media/photocard_blur/2024/08/28/b89cca3fcc8248099f6a3b1ccf54dc71.jpg?f=auto&q=75&w=640" alt="Image failed :(" width="100%">
@@ -3556,7 +4318,7 @@ so look forward to improvements in quality & functionality!</p>
 <img src="https://ndc.infludeo.com/media/photocard_blur/2024/08/28/a07a885a47ef4361abb5c2b411969895.jpg?f=auto&q=75&w=256" alt="Image failed :(" width="100%">
 </div>
 </div>
-<div class="poca"><span class="pink-text">Letter POB</span></div>
+<div class="poca">Letter POB</div>
 <div class="member">
 <div>Bang Chan
 <img src="https://ndc.infludeo.com/media/photocard_blur/2024/07/23/e27800c1e3bb4e7ebe34e93f92752ee7.jpg?f=auto&q=75&w=256" alt="Image failed :(" width="100%">
@@ -3666,19 +4428,55 @@ so look forward to improvements in quality & functionality!</p>
 </div>
 <div class="poca">Nemo B Set</div>
 
-<!-- GIANT --> <div class="album">
-    <img src="https://upload.wikimedia.org/wikipedia/en/d/d3/Stray_Kids_-_Giant.png" alt="Image failed :(" width="20%" id="giant">
-    <h1> GIANT</h1>
-    <p> 2024 ~ 2nd Japanese Album</p>
+<!-- GIANT --> <div class="album-card" id="giant">  
+<!-- Left Side -->
+	<div class="album-card-l">
+<!-- Digital Album Cover -->
+		<img class="album-cover" src="https://upload.wikimedia.org/wikipedia/en/d/d3/Stray_Kids_-_Giant.png" alt=""> 
+<!-- Album Title -->
+		<p class="album-title">GIANT</p>
+<!-- Tags: Release date, album type, etc. -->
+		<p class="album-tag">Nov. 13, 2024</p>
+	  <p class="album-tag">Japanese Full Album</p>
+	</div>
+<!-- Right Side -->
+	<div class="album-card-r">
+<!-- Physical Album Cover -->
+	  <div class="album-container">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+    </div>
+<!-- More Tags -->   
+		<p class="album-tag">4 Versions</p>
+	</div>
 </div>
 <!-- GIANT -->
   <div class="poca">*Japanese photocards coming soon*</div>
   
-<!-- HOP --> <div class="album">
-    <img src="https://upload.wikimedia.org/wikipedia/en/2/29/Stray_Kids_-_Hop.png" alt="Image failed :(" width="20%" id="hop">
-    <h1> HOP</h1>
-    <h1>SKZHOP HIPTAPE</h1>
-    <p> 2024 ~ 1st Official Mixtape</p>
+<!-- HOP --> <div class="album-card" id="hop">  
+<!-- Left Side -->
+	<div class="album-card-l">
+<!-- Digital Album Cover -->
+		<img class="album-cover" src="https://upload.wikimedia.org/wikipedia/en/2/29/Stray_Kids_-_Hop.png" alt=""> 
+<!-- Album Title -->
+		<p class="album-title">合 (HOP)</p>
+        <p class="album-title">SKZHOP HIPTAPE</p>
+<!-- Tags: Release date, album type, etc. -->
+		<p class="album-tag">December 13, 2024</p>
+	  <p class="album-tag">Special Releaae</p>
+	</div>
+<!-- Right Side -->
+	<div class="album-card-r">
+<!-- Physical Album Cover -->
+	  <div class="album-container">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+    </div>
+<!-- More Tags -->   
+		<p class="album-tag">4 Versions</p>
+	</div>
 </div>
 <!-- HOP -->
 <div class="member">
@@ -3955,30 +4753,79 @@ so look forward to improvements in quality & functionality!</p>
 </div>
 <div class="poca">Nemo Set</div>
 
-<!--Official Fanclub STAY: 5th --> <div class="album">
-    <img src="non-ph-images/Fanclub_5th_Gen_Preview_Poster.webp" alt="Image failed :(" width="20%" id="stay5th">
-    <h1> Official Fanclub STAY: 5th Generation</h1>
-    <p> 2025 ~ Current</p>
+<!--Official Fanclub STAY: 5th --> <div class="album-card" id="stay5th">  
+<!-- Left Side -->
+	<div class="album-card-l">
+<!-- Digital Album Cover -->
+		<img class="album-cover" src="non-ph-images/Fanclub_5th_Gen_Preview_Poster.webp" alt="Official Fanclub STAY: 5th Generation"> 
+<!-- Album Title -->
+		<p class="album-title">Official Fanclub STAY: 5th Generation</p>
+        <p class="album-title">STAY Over The Rain</p>
+<!-- Tags: Release date, album type, etc. -->
+		<p class="album-tag">2025</p>
+	  <p class="album-tag">Fanclub Membership Kit</p>
+	</div>
+<!-- Right Side -->
+	<div class="album-card-r">
+<!-- Physical Album Cover -->
+	  <div class="album-container">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+    </div>
+<!-- More Tags -->   
+	</div>
 </div>
 
-<!-- Mixtape : dominATE --> <div class="album">
-    <img src="https://upload.wikimedia.org/wikipedia/en/a/a3/Stray_Kids_-_Mixtape_Dominate.png" alt="Image failed :(" width="20%" id="dominate">
-    <h1 id="2025">Mixtape : dominATE</h1>
-    <p> 2025 ~ Special 7th Anniversary Album, Digital Release</p>
-</div>
-<!-- Hollow --> <div class="album">
-    <img src="https://upload.wikimedia.org/wikipedia/en/e/e1/Stray_Kids_-_Hollow.png" alt="Image failed :(" width="20%" id="hollow">
-    <h1> Hollow</h1>
-    <p> 2025 ~ 4th Japanese EP</p>
+<!-- Hollow --> <div class="album-card" id="hollow">  
+<!-- Left Side -->
+	<div class="album-card-l">
+<!-- Digital Album Cover -->
+		<img class="album-cover" src="https://upload.wikimedia.org/wikipedia/en/e/e1/Stray_Kids_-_Hollow.png" alt=""> 
+<!-- Album Title -->
+		<p class="album-title">Hollow</p>
+<!-- Tags: Release date, album type, etc. -->
+		<p class="album-tag"> June 18, 2025</p>
+	  <p class="album-tag">Japanese Mini Album</p>
+	</div>
+<!-- Right Side -->
+	<div class="album-card-r">
+<!-- Physical Album Cover -->
+	  <div class="album-container">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+    </div>
+<!-- More Tags -->   
+		<p class="album-tag">5 Versions</p>
+	</div>
 </div>
 <!-- Hollow -->
   <div class="poca">*Japanese photocards coming soon*</div>
 
 
-<!-- KARMA --> <div class="album">
-    <img src="https://upload.wikimedia.org/wikipedia/en/6/67/Stray_Kids_-_Karma.png" alt="Karma (Stray Kids album)" width="20%" id="karma">
-    <h1> KARMA </h1>
-    <p> 2025 ~ The fourth studio album </p>
+<!-- KARMA --> <div class="album-card" id="karma">  
+<!-- Left Side -->
+	<div class="album-card-l">
+<!-- Digital Album Cover -->
+		<img class="album-cover" src="https://upload.wikimedia.org/wikipedia/en/6/67/Stray_Kids_-_Karma.png" alt=""> 
+<!-- Album Title -->
+		<p class="album-title">KARMA</p>
+<!-- Tags: Release date, album type, etc. -->
+		<p class="album-tag">August 22, 2025</p>
+	  <p class="album-tag">Full Album</p>
+	</div>
+<!-- Right Side -->
+	<div class="album-card-r">
+<!-- Physical Album Cover -->
+	  <div class="album-container">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+	    <img class="album-physical" src="">
+    </div>
+<!-- More Tags -->   
+		<p class="album-tag">7 Versions</p>
+	</div>
 </div>
 <!-- KARMA -->
 <div class="member">
@@ -4364,6 +5211,31 @@ so look forward to improvements in quality & functionality!</p>
 </div>
 </div>
 <div class="poca">MAKESTAR</div>
+
+<!-- DO IT --> <div class="album-card" id="doit">  
+<!-- Left Side -->
+	<div class="album-card-l">
+<!-- Digital Album Cover -->
+		<img class="album-cover" src="non-ph-images/DOIT.jpeg" alt=""> 
+<!-- Album Title -->
+		<p class="album-title">DO IT</p>
+<!-- Tags: Release date, album type, etc. -->
+		<p class="album-tag">November 21, 2025</p>
+	  <p class="album-tag">Type</p>
+	</div>
+<!-- Right Side -->
+	<div class="album-card-r">
+<!-- Physical Album Cover -->
+	  <div class="album-container">
+	    <img class="album-physical" src="https://pbs.twimg.com/media/G56v--sbkAEkK4E?format=jpg&name=large">
+	    <img class="album-physical" src="https://pbs.twimg.com/media/G56wMTVa8AE59je?format=jpg&name=medium">
+	    <img class="album-physical" src="https://pbs.twimg.com/media/G56v3n-aoAAXvuu?format=jpg&name=large">
+        <img class="album-physical" src="https://pbs.twimg.com/media/G56wFhEbwAAgHe-?format=jpg&name=large">
+    </div>
+<!-- More Tags -->   
+		<p class="album-tag">4 Versions</p>
+	</div>
+</div>
 </div> <!-- home page end -->
 </main>
 <!-- Database end -->

@@ -1,5 +1,5 @@
 // BGM
-document.getElementById("music-art").onclick = function() {
+document.getElementById("bgm-art").onclick = function() {
 var audio = document.getElementById("BGM");
 const playPauseIcon = document.querySelector('.play-pause');
 if (audio.paused) {
@@ -80,4 +80,21 @@ function scrollFunction() {
 scrollToTopBtn.onclick = function() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
+};
+// Sidebar Navigation
+function openNav() {
+  document.querySelector(".sidebar").style.width = "20vw";
+}
+
+function closeNav() {
+  document.querySelector(".sidebar").style.width = "0";
+}
+
+document.querySelector(".sidebarbtn").onclick = function() {
+  var sidebar = document.querySelector(".sidebar");
+  if (sidebar.style.width === "20vw") {
+    closeNav();
+  } else {
+    openNav();
+  }
 };

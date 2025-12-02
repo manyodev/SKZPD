@@ -2,24 +2,20 @@
 ::-webkit-scrollbar {
     width: 15px;
     height: 15px;
-    background-color: #B0C4DE;
+    background-color: #DFB1BB;
 }
 ::-webkit-scrollbar-thumb {
-    background-color: #8aa2c0;
+    background-color: #A46574;
     border-radius: 5px;
 }
 /* Navigation Bar */
-nav ul li a.active {
-    background-color: #8aa2c0;
-    color: #000000;     
-    }
     nav {
-    background-color: #B0C4DE;
+    background: linear-gradient(0deg, #A46574 0%, #DFB1BB 50%);
     overflow: hidden;
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 10;
     }
     nav ul {
     list-style-type: none;
@@ -39,23 +35,26 @@ nav ul li a.active {
     text-decoration: none;
     }
     nav ul li a:hover {
-    background-color: #566a8c;
+    background-color: #804957;
     }
-/* Scrolling Banner */
-.m marquee {
-  padding: 0px;
-}
-
-.m p {
-  display: inline-block; /* Allows content to be side-by-side */
-  padding: 0 20px; /* Space between items */
-}
+    .sidebarbtn {
+    display: block;
+    width: 100%;
+    color: #000000;
+    text-align: center;
+    padding: 15px 16px;
+    text-decoration: none;
+  }
+  .sidebarbtn:hover {
+   background-color: #804957;
+   cursor: pointer;
+  }
 /* Music Art */
-#music-art, .album-cover {
+#bgm-art, .bgm-cover {
 position: fixed;
 bottom: .5vw;
 left: .5vw;
-z-index: 1000;
+z-index: 7;
 width: 6vw;
 height: auto;
 color: black;
@@ -65,7 +64,7 @@ border-radius: 1vw;
 }
 .play-pause{
 position: relative;
-z-index: 1000;
+z-index: 8;
 width: 2.5vw;
 height: auto;
 margin-left: 1.5vw;
@@ -90,7 +89,7 @@ transform:rotate(360deg);
 }
 .album-text {
     position: relative;
-    z-index: 1000;
+    z-index: 8;
     color: rgb(0, 0, 0);
     text-shadow: #FFFFFF 1px 1px 2px;
 
@@ -111,15 +110,15 @@ th, td {
   padding: 8px 10px;
 }
 thead {
-    background-color: #B0C4DE;
+    background-color: #DFB1BB;
 }
 /* Body */
 .bg-top {
-  background-color: #FFF0F5;
+  background-color: #E6E3DE;
 }
 .background {
     /* font-family: "Indie Flower", normal; */
-    background-color: #FFF0F5;
+    background-color: #545452;
     padding-top: 20px; /* Add padding to prevent content from going under the fixed nav bar */
     margin: 0%;
 }
@@ -138,6 +137,11 @@ thead {
 
 .show {
   display: block !important;
+  animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+@keyframes fadeEffect { /* Go from zero to full opacity */
+  from {opacity: 0.5;}
+  to {opacity: 1;}
 }
 .home-page {
   display: block;
@@ -156,16 +160,150 @@ thead {
   font-size: 1.25vw;
   padding: 1vw;
 }
+/* Footer */
+.footer-nav {
+  background: linear-gradient(0deg, #E4BFC6 0%, #E4BFC6 50%);
+  margin-top: 10px;
+  padding: 12px;
+  text-align: center;
+  padding: 1vw;
+  margin: 1vw;
+  border-radius: 1vw;
+  width: auto;
+}
+/* Sidebar */
+.sidebar {
+  height: 45vw;
+  width: 0vw;
+  position: fixed;
+  z-index: 9;
+  top: 1vw;
+  left: 0;
+  background-color: #DFB1BB;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: 0.5s;
+  padding-top: 2vw;
+  padding-bottom: 0vw;
+  opacity: 90%;
+}
+
+.sidebar a {
+  padding: 0.5vw 0vw 0vw 0.5vw;
+  text-decoration: none;
+  font-size: 1vw;
+  color: #000;
+  display: block;
+  transition: 0.3s;
+}
+.sidebar p {
+  padding: 0.5vw 0vw 0vw 0.5vw;
+  text-decoration: none;
+  font-size: 1.5vw;
+  color: #000;
+  display: block;
+}
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+/* Ribbon */
+.ribbondone {
+  font-size: 0.6vw;
+  color: #000;
+  background-color: #c4f6d2;
+  padding: 0.1vw 0.4vw;
+  margin-left: 0.5vw;
+  border-radius: 5vw;
+}
+.ribbonwip {
+  font-size: 0.6vw;
+  color: #000;
+  background-color: #f4f29a;
+  padding: 0.1vw 0.4vw;
+  margin-left: 0.5vw;
+  border-radius: 5vw;
+}
+.ribbonic {
+  font-size: 0.6vw;
+  color: #000;
+  background-color: #e0896a;
+  padding: 0.1vw 0.4vw;
+  margin-left: 0.5vw;
+  border-radius: 5vw;
+}
 /* Poca Database */
-.album {
-    display: block;
-    border: 0px solid #000;
-    width: auto;
-    text-align: center;
-    margin-top: 2.5vw;
-    font-size: 1.75vw;
+.info {
+  background-color: #E6E3DE;
+  border-left: 1vw solid #A4907A;
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  padding: 1vw 2vw;
+  font-size: 1.25vw;
+}
+
+/* Album Card */
+.album-card {
+  display: flex;
+  border: 0.25vw solid #A4907A;
+  border-radius: 2vw;
+  color: #000;
+  font-size: 1.25vw;
+  min-width: fit-content;
+  max-width: 50vw;
+  margin-top: 5vw;
+  margin-bottom: 5vw;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #E6E3DE;
+}
+/* Left Side */
+.album-card-l {
+  padding: 1vw;
+  align-items: center;
+  border-radius: 2vw;
+}
+.album-cover {
+  display: block;
+  border-radius: 0.5vw;
+  width: 20vw;
+  height: auto;
+  margin: auto;
+}
+/* Right Side */
+.album-card-r {
+  padding: 1vw;
+  
+}
+.album-container {
+}
+.album-physical {
+  margin: auto;
+  height: 15vw;
+  font-weight: bold;
 
 }
+/* Album Card */
+.album-title {
+  font-weight: bold;
+  font-size: 1.75vw;
+  text-align: center;
+}
+.album-tag {
+  display: inline-block;
+  color: #000;
+  background: linear-gradient(0deg, #E4BFC6 0%, #E4BFC6 50%);
+  border-radius: 1vw;
+  padding: 0.5vw;
+  margin: 0.5vw;
+}
+/* Photocards */
 .member {
   text-align: center;
   display: flex;
@@ -189,7 +327,9 @@ thead {
 .poca {
     display: block;
     border: 1px solid #000;
+    border-radius: 0.5vw;
     background-color: #fff;
+    background: linear-gradient(0deg, #B1B1B1 0%, #F4F4F4 50%);
     min-width: fit-content;
     max-width: 20vw;
     text-align: center;
@@ -201,6 +341,9 @@ thead {
     font-weight: bold;
     font-size: 1.75vw;
 }
+.broadcast {
+  background: linear-gradient(0deg, #A4907A 0%, #DFB1BB 50%) !important;
+}
 /* Font */
 .indie-flower-regular {
   font-family: "Indie Flower", cursive;
@@ -208,18 +351,14 @@ thead {
   font-style: normal;
 }
 /* Buttons */
-.button-form {
-    background-color: #8aa2c0;
+.form-btn {
+    background: linear-gradient(0deg, #A46574 0%, #DFB1BB 50%);
     color: #FFFFFF;
     border: none;
     border-radius: 5px;
     padding: 10px 15px;
     font-size: 16px;
     cursor: pointer;
-}
-
-button:hover {
-    background-color: #566a8c;
 }
 link {
     color: #FFFFFF;
@@ -228,18 +367,6 @@ link {
 link:visited {
     color: #FFFFFF;
     }
-/* text colors */
-.pink-text {
-    color: rgb(209, 141, 152);
-    /* text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; */
-    /* background-color: white; */
-}
-
-.gold-text {
-    color: rgb(187, 162, 20);
-    /* text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; */
-    /* background-color: white; */
-}
 /* Background Video */
 .background-video-wrapper {
   color: #fff;
@@ -294,16 +421,13 @@ link:visited {
   position: fixed;
   bottom: 1vw;
   right: 1vw;
-  z-index: 99;
+  z-index: 10;
   font-size: 1.5vw;
   border: none;
   outline: none;
-  background-color: #8aa2c0;
-  color: white;
+  background: linear-gradient(0deg, #A46574 0%, #DFB1BB 50%);
+  color: #000;
   cursor: pointer;
   padding: 1vw;
   border-radius: 1vw;
-}
-#scrollToTopBtn:hover {
-  background-color: #566a8c;
 }
