@@ -1,100 +1,219 @@
+/**
+ * Utility function to calculate the current theme setting.
+ * Look for a local storage value.
+ * Fall back to system setting.
+ * Fall back to light mode.
+ */
+function calculateSettingAsThemeString({
+  localStorageTheme,
+  systemSettingDark,
+}) {
+  if (localStorageTheme !== null) {
+    return localStorageTheme;
+  }
+
+  if (systemSettingDark.matches) {
+    return "black-swan";
+  }
+
+  return "white-swan";
+}
+
+/**
+ * Utility function to update the button text and aria-label.
+ */
+function updateButton({ buttonEl, isDark }) {
+  const newCta = isDark ? "White Swan" : "Black Swan";
+  // use an aria-label if you are omitting text on the button
+  // and using a sun/moon icon, for example
+  buttonEl.setAttribute("aria-label", newCta);
+  buttonEl.innerText = newCta;
+}
+
+/**
+ * Utility function to update the theme setting on the html tag
+ */
+function updateThemeOnHtmlEl({ theme }) {
+  document.querySelector("html").setAttribute("data-theme", theme);
+}
+
+/**
+ * On page load:
+ */
+
+/**
+ * 1. Grab what we need from the DOM and system settings on page load
+ */
+const button = document.querySelector("[data-theme-toggle]");
+const localStorageTheme = localStorage.getItem("theme");
+const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
+
+/**
+ * 2. Work out the current site settings
+ */
+let currentThemeSetting = calculateSettingAsThemeString({
+  localStorageTheme,
+  systemSettingDark,
+});
+
+/**
+ * 3. Update the theme setting and button text accoridng to current settings
+ */
+updateButton({
+  buttonEl: button,
+  isDark: currentThemeSetting === "black-swan",
+});
+updateThemeOnHtmlEl({ theme: currentThemeSetting });
+
+/**
+ * 4. Add an event listener to toggle the theme
+ */
+button.addEventListener("click", (event) => {
+  const newTheme =
+    currentThemeSetting === "black-swan" ? "white-swan" : "black-swan";
+
+  localStorage.setItem("theme", newTheme);
+  updateButton({ buttonEl: button, isDark: newTheme === "black-swan" });
+  updateThemeOnHtmlEl({ theme: newTheme });
+
+  currentThemeSetting = newTheme;
+});
+
+/** */
+function myFunction() {
+  var copyText = document.getElementById("myInput");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999);
+  navigator.clipboard.writeText(copyText.value);
+
+  var tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "Copied email !";
+}
+
+function outFunc() {
+  var tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "Get email";
+}
 // BGM
-document.getElementById("bgm-art").onclick = function() {
-var audio = document.getElementById("BGM");
-const playPauseIcon = document.querySelector('.play-pause');
-if (audio.paused) {
-    audio.play();
-    playPauseIcon.style.animationPlayState = 'running';
-} else {
-    audio.pause();
-    playPauseIcon.style.animationPlayState = 'paused';
-}
-};
+document.addEventListener("DOMContentLoaded", () => {
+  const audio = new Audio();
+  const trackTitle = document.querySelector(".track-title");
+  const playPauseBtn = document.querySelector(".play-pause");
+  const prevBtn = document.querySelector(".prev");
+  const nextBtn = document.querySelector(".next");
+  const progressBar = document.querySelector(".progress-bar");
+  const pauseIcon = document.querySelector("#pauseIcon");
 
-// Countdown Timer
-// Goal Date
-var countDownDate = new Date("Nov 21, 2025 00:00:00").getTime();
+  const trackList = [
+    {
+      src: "Levanter.mp3",
+      title: "Levanter",
+      artist: "Stray Kids",
+    },
+    {
+      src: "Sunshine.mp3",
+      title: "Sunshine",
+      artist: "Stray Kids",
+    },
+    {
+      src: "0801.mp3",
+      title: "0801",
+      artist: "Stray Kids",
+    },
+    {
+      src: "Mixtape_OnTrack.mp3",
+      title: "Mixtape: On Track",
+      artist: "Stray Kids",
+    },
+    {
+      src: "StarLost.mp3",
+      title: "Star Lost",
+      artist: "Stray Kids",
+    },
+  ];
 
-// Update every 1 second
-var x = setInterval(function() {
+  let currentTrack = 0;
+  let isPlaying = true;
 
-  // Get today's date and time
-  var now = new Date().getTime();
+  function loadTrack(index) {
+    const current = trackList[index];
+    audio.src = current.src;
+    if (trackTitle) trackTitle.textContent = current.title;
 
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Display the result in the element with id="countdown"
-  document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-
-  // If the count down is finished, write some text
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("countdown").innerHTML = "RELEASED";
+    if (isPlaying) {
+      audio.play();
+      if (pauseIcon) {
+        pauseIcon.classList.remove("fa-play");
+        pauseIcon.classList.add("fa-pause");
+      }
+    }
   }
-}, 1000);
-// Switch Pages
-function showAboutPage() {
-  document.querySelector(".home-page").classList.remove("show");
-  document.querySelector(".home-page").classList.add("hide");
-  document.querySelector(".contact-page").classList.remove("show");
-  document.querySelector(".contact-page").classList.add("hide");
-  document.querySelector(".about-page").classList.remove("hide");
-  document.querySelector(".about-page").classList.add("show");
-}
-function showHomePage() {
-  document.querySelector(".about-page").classList.remove("show");
-  document.querySelector(".about-page").classList.add("hide");
-  document.querySelector(".contact-page").classList.remove("show");
-  document.querySelector(".contact-page").classList.add("hide");
-  document.querySelector(".home-page").classList.remove("hide");
-  document.querySelector(".home-page").classList.add("show");
-}
-function showContactPage() {
-  document.querySelector(".home-page").classList.remove("show");
-  document.querySelector(".home-page").classList.add("hide");
-  document.querySelector(".about-page").classList.remove("show");
-  document.querySelector(".about-page").classList.add("hide");
-  document.querySelector(".contact-page").classList.remove("hide");
-  document.querySelector(".contact-page").classList.add("show");
-}
-// Scroll to Top Button
-var scrollToTopBtn = document.getElementById("scrollToTopBtn");
-window.onscroll = function() {scrollFunction();};
 
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    scrollToTopBtn.style.display = "block";
-  } else {
-    scrollToTopBtn.style.display = "none";
+  function togglePlayPause() {
+    if (isPlaying) {
+      audio.pause();
+      if (pauseIcon) {
+        pauseIcon.classList.remove("fa-pause");
+        pauseIcon.classList.add("fa-play");
+      }
+    } else {
+      audio.play();
+      if (pauseIcon) {
+        pauseIcon.classList.remove("fa-play");
+        pauseIcon.classList.add("fa-pause");
+      }
+    }
+    isPlaying = !isPlaying;
   }
-}
 
-scrollToTopBtn.onclick = function() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-};
-// Sidebar Navigation
-function openNav() {
-  document.querySelector(".sidebar").style.width = "20vw";
-}
+  function updateProgress() {
+    if (audio.duration && progressBar) {
+      const progress = (audio.currentTime / audio.duration) * 100;
+      progressBar.style.width = `${progress}%`;
+    }
 
-function closeNav() {
-  document.querySelector(".sidebar").style.width = "0";
-}
-
-document.querySelector(".sidebarbtn").onclick = function() {
-  var sidebar = document.querySelector(".sidebar");
-  if (sidebar.style.width === "20vw") {
-    closeNav();
-  } else {
-    openNav();
+    if (audio.ended) {
+      nextTrack();
+    }
   }
-};
+
+  function nextTrack() {
+    currentTrack = (currentTrack + 1) % trackList.length;
+    loadTrack(currentTrack);
+  }
+
+  function prevTrack() {
+    currentTrack = (currentTrack - 1 + trackList.length) % trackList.length;
+    loadTrack(currentTrack);
+  }
+
+  const progressContainer = document.querySelector(".progress-container");
+  if (progressContainer) {
+    progressContainer.addEventListener("click", (e) => {
+      const rect = progressContainer.getBoundingClientRect();
+      const clickPosition = e.clientX - rect.left;
+      const progressContainerWidth = rect.width;
+      const seekTime =
+        (clickPosition / progressContainerWidth) * audio.duration;
+      audio.currentTime = seekTime;
+    });
+  }
+
+  if (playPauseBtn) playPauseBtn.addEventListener("click", togglePlayPause);
+  if (nextBtn) nextBtn.addEventListener("click", nextTrack);
+  if (prevBtn) prevBtn.addEventListener("click", prevTrack);
+  audio.addEventListener("timeupdate", updateProgress);
+
+  loadTrack(0);
+  audio.play();
+  if (pauseIcon) {
+    pauseIcon.classList.remove("fa-play");
+    pauseIcon.classList.add("fa-pause");
+  }
+});
+//
+let mybutton = document.getElementById("topButton");
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
