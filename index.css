@@ -435,3 +435,10 @@ button.next {
   font-weight: bold;
   font-size: 20px;
 }
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--color-dt);
+  filter: drop-shadow(0 -1px 0 #7e6272) drop-shadow(0 1px 0 #7e6272)
+    drop-shadow(-1px 0 0 #7e6272) drop-shadow(1px 0 0 #7e6272);
+}
