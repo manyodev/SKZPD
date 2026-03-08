@@ -1,4 +1,19 @@
-/**
+function copyEmail() {
+  var copyText = document.getElementById("email");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999);
+  navigator.clipboard.writeText(copyText.value);
+  var tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "Email copied to clipboard!";
+}
+
+function outFunc() {
+  var tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "Copy to clipboard";
+}
+const emailBtn = document.getElementById("emailBtn");
+
+emailBtn.addEventListener("click", copyEmail); /**
  * Utility function to calculate the current theme setting.
  * Look for a local storage value.
  * Fall back to system setting.
@@ -23,11 +38,11 @@ function calculateSettingAsThemeString({
  * Utility function to update the button text and aria-label.
  */
 function updateButton({ buttonEl, isDark }) {
-  const newCta = isDark ? "White Swan" : "Black Swan";
+  const newCta = isDark ? "<i class='fa-solid fa-moon'></i>" : "<i class='fa-solid fa-sun'></i>";
   // use an aria-label if you are omitting text on the button
   // and using a sun/moon icon, for example
   buttonEl.setAttribute("aria-label", newCta);
-  buttonEl.innerText = newCta;
+  buttonEl.innerHTML = newCta;
 }
 
 /**
@@ -79,22 +94,7 @@ button.addEventListener("click", (event) => {
   currentThemeSetting = newTheme;
 });
 
-/** */
-function myFunction() {
-  var copyText = document.getElementById("myInput");
-  copyText.select();
-  copyText.setSelectionRange(0, 99999);
-  navigator.clipboard.writeText(copyText.value);
-
-  var tooltip = document.getElementById("myTooltip");
-  tooltip.innerHTML = "Copied email !";
-}
-
-function outFunc() {
-  var tooltip = document.getElementById("myTooltip");
-  tooltip.innerHTML = "Get email";
-}
-// BGM
+/* BGM
 document.addEventListener("DOMContentLoaded", () => {
   const audio = new Audio();
   const trackTitle = document.querySelector(".track-title");
@@ -211,9 +211,10 @@ document.addEventListener("DOMContentLoaded", () => {
     pauseIcon.classList.add("fa-pause");
   }
 });
-//
+
 let mybutton = document.getElementById("topButton");
 function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+*/
