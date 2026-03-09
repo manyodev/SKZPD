@@ -9,7 +9,273 @@
 
 <url>
   <loc>https://skzpd.com/</loc>
-  <lastmod>2026-02-21T12:57:47+00:00</lastmod>
+  <lastmod>2026-03-08T18:14:25+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://skzpd.com/index.html</loc>
+  <lastmod>2026-03-08T18:14:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://skzpd.com/updates.html</loc>
+  <lastmod>2026-03-08T18:14:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://skzpd.com/korean-albums.html</loc>
+  <lastmod>2026-03-08T18:14:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://skzpd.com/japanese-albums.html</loc>
+  <lastmod>2026-03-08T18:14:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://skzpd.com/taiwan-albums.html</loc>
+  <lastmod>2026-03-08T18:14:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://skzpd.com/korean-fanclub.html</loc>
+  <lastmod>2026-03-08T18:14:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://skzpd.com/photobooks.html</loc>
+  <lastmod>2026-03-08T18:14:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://skzpd.com/fanmeetings.html</loc>
+  <lastmod>2026-03-08T18:14:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://skzpd.com/tour.html</loc>
+  <lastmod>2026-03-08T18:14:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://skzpd.com/mixtape.html</loc>
+  <lastmod>2026-03-08T18:14:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://skzpd.com/i-am-not.html</loc>
+  <lastmod>2026-03-08T18:14:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://skzpd.com/i-am-who.html</loc>
+  <lastmod>2026-03-08T18:14:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://skzpd.com/i-am-you.html</loc>
+  <lastmod>2026-03-08T18:14:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://skzpd.com/miroh.html</loc>
+  <lastmod>2026-03-08T18:14:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://skzpd.com/yellow-wood.html</loc>
+  <lastmod>2026-03-08T18:14:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://skzpd.com/levanter.html</loc>
+  <lastmod>2026-03-08T18:14:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://skzpd.com/go-live.html</loc>
+  <lastmod>2026-03-08T18:14:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://skzpd.com/in-life.html</loc>
+  <lastmod>2026-03-08T18:14:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://skzpd.com/noeasy.html</loc>
+  <lastmod>2026-03-08T18:14:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://skzpd.com/christmas-evel.html</loc>
+  <lastmod>2026-03-08T18:14:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://skzpd.com/oddinary.html</loc>
+  <lastmod>2026-03-08T18:14:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://skzpd.com/maxident.html</loc>
+  <lastmod>2026-03-08T18:14:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://skzpd.com/5-star.html</loc>
+  <lastmod>2026-03-08T18:14:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://skzpd.com/rock-star.html</loc>
+  <lastmod>2026-03-08T18:14:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://skzpd.com/ate.html</loc>
+  <lastmod>2026-03-08T18:14:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://skzpd.com/hop.html</loc>
+  <lastmod>2026-03-08T18:14:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://skzpd.com/karma.html</loc>
+  <lastmod>2026-03-08T18:14:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://skzpd.com/do-it.html</loc>
+  <lastmod>2026-03-08T18:14:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://skzpd.com/skz-2020.html</loc>
+  <lastmod>2026-03-08T18:14:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://skzpd.com/top.html</loc>
+  <lastmod>2026-03-08T18:14:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://skzpd.com/all-in.html</loc>
+  <lastmod>2026-03-08T18:14:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://skzpd.com/scars.html</loc>
+  <lastmod>2026-03-08T18:14:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://skzpd.com/circus.html</loc>
+  <lastmod>2026-03-08T18:14:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://skzpd.com/the-sound.html</loc>
+  <lastmod>2026-03-08T18:14:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://skzpd.com/social-path.html</loc>
+  <lastmod>2026-03-08T18:14:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://skzpd.com/giant.html</loc>
+  <lastmod>2026-03-08T18:14:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://skzpd.com/hollow.html</loc>
+  <lastmod>2026-03-08T18:14:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://skzpd.com/i-am-not-taiwan.html</loc>
+  <lastmod>2026-03-08T18:14:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://skzpd.com/i-am-you-taiwan.html</loc>
+  <lastmod>2026-03-08T18:14:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://skzpd.com/yellow-wood-taiwan.html</loc>
+  <lastmod>2026-03-08T18:14:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://skzpd.com/0th-stay.html</loc>
+  <lastmod>2026-03-08T18:14:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://skzpd.com/1st-stay.html</loc>
+  <lastmod>2026-03-08T18:14:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://skzpd.com/2nd-stay.html</loc>
+  <lastmod>2026-03-08T18:14:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://skzpd.com/3rd-stay.html</loc>
+  <lastmod>2026-03-08T18:14:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://skzpd.com/4th-stay.html</loc>
+  <lastmod>2026-03-08T18:14:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://skzpd.com/5th-stay.html</loc>
+  <lastmod>2026-03-08T18:14:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://skzpd.com/stay-in-london.html</loc>
+  <lastmod>2026-03-08T18:14:25+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://skzpd.com/stay-in-playground.html</loc>
+  <lastmod>2026-03-08T18:14:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://skzpd.com/stay-in-stay.html</loc>
+  <lastmod>2026-03-08T18:14:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://skzpd.com/i-am-you-mwave.html</loc>
+  <lastmod>2026-03-08T18:14:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://skzpd.com/i-am-not-unveil.html</loc>
+  <lastmod>2026-03-08T18:14:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://skzpd.com/i-am-who-unveil.html</loc>
+  <lastmod>2026-03-08T18:14:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://skzpd.com/i-am-you-unveil.html</loc>
+  <lastmod>2026-03-08T18:14:25+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 
 

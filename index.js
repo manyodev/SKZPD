@@ -38,7 +38,7 @@ function calculateSettingAsThemeString({
  * Utility function to update the button text and aria-label.
  */
 function updateButton({ buttonEl, isDark }) {
-  const newCta = isDark ? "<i class='fa-solid fa-moon'></i>" : "<i class='fa-solid fa-sun'></i>";
+  const newCta = isDark ? "<i class='fa-solid fa-sun'></i>" : "<i class='fa-solid fa-moon'></i>";
   // use an aria-label if you are omitting text on the button
   // and using a sun/moon icon, for example
   buttonEl.setAttribute("aria-label", newCta);
