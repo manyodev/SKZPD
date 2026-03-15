@@ -1,0 +1,48 @@
+{
+  "releases": {
+    "koreanAlbum": {
+      "cover": "https://upload.wikimedia.org/wikipedia/en/9/94/Stray_Kids_Mixtape.jpg",
+      "contents": [
+        {
+          "mixtape": [
+            {
+              "englishTitle": "Mixtape",
+              "koreanTitle": null,
+              "japaneseTitle": null,
+              "releaseDate": "2018-03-26",
+              "cover": "https://upload.wikimedia.org/wikipedia/en/9/94/Stray_Kids_Mixtape.jpg"
+            }
+          ]
+        },
+        "iAmNot",
+        "iAmWho",
+        "iAmYou",
+        "cle1",
+        "cle2",
+        "cle3",
+        "goLive",
+        "inLife",
+        "noEasy",
+        "christmasEveL",
+        "oddinary",
+        "maxident",
+        "5star",
+        "rockStar",
+        "ate",
+        "hop",
+        "karma",
+        "doIt"
+      ],
+      "japaneseAlbum": [],
+      "taiwaneseAlbum": [],
+      "koreanFanclub": [],
+      "japaneseFanclub": [],
+      "photobook": [],
+      "koreanSeasonsGreetings": [],
+      "japaneseSeasonsGreetings": [],
+      "fanmeeting": [],
+      "concert": [],
+      "other": []
+    }
+  }
+}
