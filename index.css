@@ -145,6 +145,7 @@ ul.navBar li a:hover {
 }
 .updates {
   margin: 16px 0;
+  width: 100%;
 }
 .updateDate {
   background-color: var(--rv-txt);
@@ -545,11 +546,23 @@ button.next {
 .hyunchan {
   background-image: linear-gradient(to right, #b1b7cf, #fbf6f5);
 }
+.chansung {
+  background-image: linear-gradient(to right, #b1b7cf, #ffbc97);
+}
 .minsung {
   background-image: linear-gradient(to right, #ffffff, #ffbc97);
 }
+.minlix {
+  background-image: linear-gradient(to right, #ffffff, #f9ec6d);
+}
+.t2racha {
+  background-image: linear-gradient(to right, #fca5c8, #ffbc97);
+}
 .seungbin {
   background-image: linear-gradient(to right, #fca5c8, #fad4b4);
+}
+.seunglix {
+  background-image: linear-gradient(to right, #f9ec6d, #fad4b4);
 }
 .jeonglix {
   background-image: linear-gradient(to right, #f9ec6d, #ffe5d1);
@@ -565,6 +578,9 @@ button.next {
 }
 .seungsung {
   background-image: linear-gradient(to right, #ffbc97, #fad4b4);
+}
+.seungin {
+  background-image: linear-gradient(to right, #fad4b4, #ffe5d1);
 }
 .blank {
   background-color: var(--bg-color);
