@@ -51,6 +51,9 @@ main {
 h1 {
   margin-top: 60px;
 }
+h2 {
+  margin-bottom: 20px;
+}
 .nav {
   border: 2px solid #7e6271;
   border-top: 0px;
@@ -207,25 +210,44 @@ ul.navBar li a:hover {
   height: auto;
   margin-bottom: 16px;
 }
+.hero > p {
+  padding: 10px;
+  font-size: 1rem;
+}
 .explore {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 1rem;
   width: 100%;
   height: auto;
 }
 .card {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  height: 200px;
   width: 200px;
-  margin: 1rem;
+  flex: 0 0 200px;
+  margin: 0;
   padding: 0%;
   font-size: 1rem;
   color: #000;
 }
 .card h3 {
+  display: flex;
+  justify-content: center;
+  min-height: 2.5em;
   font-weight: bold;
   font-size: 1.25rem;
   color: var(--color-txt);
+}
+.card .caroBtn {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  flex: none;
 }
 .caroBtn {
   display: inline-block;
@@ -610,4 +632,133 @@ h1 {
   color: var(--color-dt);
   filter: drop-shadow(0 -1px 0 #7e6272) drop-shadow(0 1px 0 #7e6272)
     drop-shadow(-1px 0 0 #7e6272) drop-shadow(1px 0 0 #7e6272);
+}
+
+@media (max-width: 600px) {
+  h1 {
+    margin-top: 12px;
+    padding: 0 8px;
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    margin-bottom: 12px;
+    font-size: 1.4rem;
+  }
+
+  main {
+    width: 100%;
+    padding: 12px;
+    border-radius: 0;
+  }
+
+  .nav {
+    position: relative;
+    top: auto;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 16px;
+    padding: 4px 8px;
+    border-radius: 8px;
+  }
+
+  .leftNav,
+  .rightNav {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .header {
+    width: 180px;
+    height: 40px;
+  }
+
+  .header a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .header img {
+    object-fit: cover;
+  }
+
+  ul.navBar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 14px;
+    padding: 6px 0;
+  }
+
+  ul.navBar li {
+    padding-right: 0;
+    font-size: 14px;
+  }
+
+  .themeBtn {
+    margin: 0 8px;
+  }
+
+  .hero > p {
+    padding: 8px 2px;
+  }
+
+  .album-cover {
+    width: min(100%, 320px);
+  }
+
+  .explore {
+    gap: 16px 12px;
+  }
+
+  .card {
+    width: auto;
+    min-width: 0;
+    flex: 1 1 calc(50% - 6px);
+    max-width: 200px;
+  }
+
+  .card h3 {
+    padding: 4px 2px 0;
+    font-size: 1rem;
+  }
+
+  .sidebarLeft,
+  .sidebarRight {
+    position: static;
+    top: auto;
+    right: auto;
+    left: auto;
+    width: 100%;
+    max-height: none;
+    margin: 12px 0;
+  }
+
+  .discography {
+    max-height: 40vh;
+  }
+
+  .member > div {
+    width: auto;
+    max-width: 200px;
+    flex: 1 1 calc(50% - 8px);
+    margin: 0;
+    padding: 4px;
+    font-size: 16px;
+  }
+
+  .member {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .poca {
+    width: fit-content;
+    min-width: 0;
+    max-width: 100%;
+  }
 }

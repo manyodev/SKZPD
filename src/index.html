@@ -28,7 +28,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
       crossorigin="anonymous"
     />
-
+<link rel="stylesheet" href="css/all.min.css" />
     <meta
       name="keywords"
       content="Stray Kids photocards, Stray Kids collection, stray kids photocard template, skz photocard template, skz photocard collection, skz photocards, skz pobs template, skz pobs photocards"
@@ -62,11 +62,7 @@
         </div>
         <div class="rightNav">
           <ul class="navBar">
-            <li>
-              <a href="updates.html"
-                ><i class="fa-solid fa-rotate"></i>Updates</a
-              >
-            </li>
+
             <li>
               <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSd-AAPD98qPNYZLj_d-jL4sfqW6g9Ezy49xYmB7iDQheM2fFQ/viewform?usp=header"
@@ -103,13 +99,45 @@
         <p>
           The ultimate reference for Stray Kids photocards! Only real, official
           merchandise is displayed here. And no links to X! Find photocard
-          templates without leaving the site.
+          templates without leaving the site. This site is a work in progress. I try to update regularly. If there’s something specific you want to see let me know via Google Forms or email, and I’ll include that in the next update! Otherwise I’m updating recent releases and working backwards from there. 
         </p>
-        <p> This is by no means complete, but that is the goal. Bookmark this page and check back regularly for updates! </p>
-        <p>
-          If you have any suggestions, please fill out
-          the feedback form linked in the navigation bar above. Thank you!
-        </p>
+        <p id="commit-date">Loading last update time...</p>
+
+<script>
+  // Replace these with your actual GitHub details
+  const username = "manyodev";
+  const repo = "SKZPD";
+
+  // Fetch the latest branch commit details from the GitHub API
+  fetch(`https://api.github.com/repos/${username}/${repo}/commits?per_page=1`)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => {
+      if (data && data.length > 0) {
+        // Extract the commit timestamp
+        const commitDateStr = data[0].commit.committer.date;
+        const commitDate = new Date(commitDateStr);
+        
+        // Format the date (e.g., "October 2, 2026")
+        const formattedDate = commitDate.toLocaleDateString('en-US', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        });
+
+        document.getElementById('commit-date').innerText = `Last Updated: ${formattedDate}`;
+      }
+    })
+    .catch(error => {
+      console.error('Error fetching commit date:', error);
+      document.getElementById('commit-date').innerText = 'Failed to load update time.';
+    });
+</script>
+
       </div>
       <h2>Recently Updated</h2>
       <div class="explore">
@@ -162,11 +190,11 @@
             <h3>Taiwanese Albums</h3>
           </div>
           <div class="card">
-            <a href="" class="caroBtn"></a>
+            <a href="korean-sg.html" class="caroBtn" style="background-image: url(&quot;https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZnh2z_GZJnnb-ssiXA3vbOR9J0INexb17fjbr4uZpWT6XivxjLwVlFQs&s=10&quot;);"></a>
             <h3>Korean Season's Greetings</h3>
           </div>
           <div class="card">
-            <a href="" class="caroBtn"></a>
+            <a href="japan-sg.html" class="caroBtn" style="background-image: url(&quot;https://preview.redd.it/221001-stray-kids-japan-seasons-greetings-2023-s-318-teaser-v0-z02ub7mvd4r91.jpg?auto=webp&s=2266dbacf85bc04065dae10a44495fbdf5a4de61&quot;);"></a>
             <h3>Japanese Season's Greetings</h3>
           </div>
           <div class="card">
@@ -195,12 +223,12 @@
             <h3>Photobooks</h3>
           </div>
           <div class="card">
-            <a href="fanmeetings.html" class="caroBtn"></a>
+            <a href="fanmeetings.html" class="caroBtn" style="background-image: url(&quot;https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdQU6gG-F9Cw1mrb5awAMep4Mcu_geHJ8GjJ1jPq1riiGIqb0IThpM6n8&s=10&quot;);"></a>
             <h3>Fanmeetings</h3>
           </div>
           <div class="card">
-            <a href="" class="caroBtn"></a>
-            <h3>Pop-Up Stores</h3>
+            <a href="event.html" class="caroBtn" style="background-image: url(&quot;https://images.squarespace-cdn.com/content/v1/5c3398ebaa49a1b1f53eabdf/3b180923-6fe7-4536-b31c-f17c6dec5b20/skzpop-up.png?format=2500w&quot;);"></a>
+            <h3>Pop-Up Stores & Events</h3>
           </div>
           <div class="card">
             <a
@@ -212,20 +240,21 @@
             ></a>
             <h3>Tours & DVDs</h3>
           </div>
+          
           <div class="card">
-            <a href="" class="caroBtn"></a>
-            <h3>Brand Collaborations (skincare, clothing, etc)</h3>
-          </div>
-          <div class="card">
-            <a href="" class="caroBtn"></a>
+            <a href="magazine.html" class="caroBtn" style="background-image: url(&quot;https://choicemusicla.com/cdn/shop/files/K-STAR_Magazine_SP_Cover_Stray_Kids_Hyunjin_Felix_Cover.webp?v=1730308279&quot;);"></a>
             <h3>Magazine</h3>
           </div>
           <div class="card">
-            <a href="" class="caroBtn"></a>
+            <a href="skzoo.html" class="caroBtn" style="background-image: url(&quot;https://hobiego.com/cdn/shop/files/stray-kids-skzoo-plush-originalplushwolf-chanhobiego-4070831.jpg?v=1754308668&quot;);"></a>
             <h3>SKZOO</h3>
           </div>
           <div class="card">
-            <a href="" class="caroBtn"></a>
+            <a href="brand.html" class="caroBtn" style="background-image: url(&quot;https://www.wondernara.com/cdn/shop/files/Schermafbeelding_2025-08-27_175112.png?v=1756284914&width=480&quot;);"></a>
+            <h3>Brand Collaborations (Fashion, Tech, Food)</h3>
+          </div>
+          <div class="card">
+            <a href="signatures.html" class="caroBtn" style="background-image: url(&quot;https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQX1gnm1yAOQzO691JO0bgGAMtcD15tNW5BbxKNNHYA1ymLcnh8CLd0ovzx&s=10&quot;);"></a>
             <h3>Signatures, etc</h3>
           </div>
         </div>
